@@ -3,7 +3,6 @@
 [![][Fontbakery]](https://schibsted.github.io/schibsted-grotesk/fontbakery/fontbakery-report.html)
 [![][Universal]](https://schibsted.github.io/schibsted-grotesk/fontbakery/fontbakery-report.html)
 [![][GF Profile]](https://schibsted.github.io/schibsted-grotesk/fontbakery/fontbakery-report.html)
-[![][Outline Correctness]](https://schibsted.github.io/schibsted-grotesk/fontbakery/fontbakery-report.html)
 [![][Shaping]](https://schibsted.github.io/schibsted-grotesk/fontbakery/fontbakery-report.html)
 
 [Fontbakery]: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fschibsted%2Fschibsted-grotesk%2Fgh-pages%2Fbadges%2Foverall.json
