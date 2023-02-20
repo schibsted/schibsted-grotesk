@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>GFR - Waterfall</title>
+    
+    <style type="text/css">
+    
+        html{
+	  font-family: sans-serif;
+	}
+	.box-title{
+	  width: 100%;
+	  float: left;
+	  font-size: 8pt;
+	  font-weight: 700;
+	  border-top: 1px solid black;
+	  padding-top: 5px;
+	  margin-bottom: 10pt;
+	  display: block;
+	}
+	.box{
+	  margin-bottom: 20pt;
+	  width: 100%;
+	  float: left;
+	}
+	.box-text{
+		float: left;
+	}
+	
+	#nav{
+	  position: fixed;
+	  right: 20px;
+	  z-index: 100;
+	}
+	#font-toggle{
+	  display: block;
+	  font-weight: 700;
+	  cursor: pointer;
+	  -webkit-user-select: none; /* Safari */        
+	  -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* IE10+/Edge */
+	  user-select: none; /* Standard */
+	  text-align: center;
+	  color: white;
+	  background-color: black;
+	  width: 50px;
+	  display: block;
+	  padding: 10px;
+	}
+	.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+	}
+
+	.tooltip .tooltiptext {
+	font-family: sans-serif;
+	visibility: hidden;
+	width: 500px;
+	background-color: black;
+	color: #fff;
+	text-align: left;
+	font-size: 12pt;
+	line-height: 15pt;
+	border-radius: 6px;
+	padding: 5px 0;
+
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	}
+
+	.tooltip:hover .tooltiptext {
+	padding: 10px;
+	visibility: visible;
+	}
+	.tooltipleft {
+		float:left;
+		width: 249px;
+	}
+	.tooltipright {
+		float:right;
+		width:250px;
+	}
+
+			/* Stuff needed for the table differ */
+            body {
+                font-family: Helvetica;
+            }
+            .node {
+                font-family: courier;
+                cursor: pointer;
+                position: relative;
+                left: 30px;
+                padding: 5px;
+                display: block;
+                border: 1px dashed grey;
+            }
+            .header {
+            font-weight: bold;
+            }
+            .attrib-old{
+                color: red;
+                cursor: text;
+            }
+            .attrib-new{
+                color: green;
+                cursor: text;
+            }
+            .leaf {
+            font-weight: bold;
+            }
+            .old .cell .new {
+            	display:  none;
+            }
+            .new .cell .old {
+            	display:  none;
+            }
+            .both .cell .old {
+            	opacity: 0.75;
+            	color:  red;
+            }
+            .both .cell .new {
+            	opacity: 0.75;
+            	position: absolute;
+            	top: 0;
+            	color:  green;
+            }
+			.spacer {
+				display:block;
+				float:left;
+				width:100%;
+			}
+
+	  
+
+	  
+
+	  
+	    @font-face{
+    src: url(SchibstedGrotesk-Bold.ttf);
+    font-family: "Schibsted Grotesk";
+    font-weight: 700;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(SchibstedGrotesk-MediumItalic.ttf);
+    font-family: "Schibsted Grotesk";
+    font-weight: 500;
+    
+    font-style: italic;
+}
+	  
+	    @font-face{
+    src: url(SchibstedGrotesk-SemiBold.ttf);
+    font-family: "Schibsted Grotesk";
+    font-weight: 600;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(SchibstedGrotesk-Black.ttf);
+    font-family: "Schibsted Grotesk";
+    font-weight: 900;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(SchibstedGrotesk-Medium.ttf);
+    font-family: "Schibsted Grotesk";
+    font-weight: 500;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(SchibstedGrotesk-BlackItalic.ttf);
+    font-family: "Schibsted Grotesk";
+    font-weight: 900;
+    
+    font-style: italic;
+}
+	  
+	    @font-face{
+    src: url(SchibstedGrotesk-SemiBoldItalic.ttf);
+    font-family: "Schibsted Grotesk";
+    font-weight: 600;
+    
+    font-style: italic;
+}
+	  
+	    @font-face{
+    src: url(SchibstedGrotesk-BoldItalic.ttf);
+    font-family: "Schibsted Grotesk";
+    font-weight: 700;
+    
+    font-style: italic;
+}
+	  
+	    @font-face{
+    src: url(SchibstedGrotesk-ExtraBoldItalic.ttf);
+    font-family: "Schibsted Grotesk";
+    font-weight: 800;
+    
+    font-style: italic;
+}
+	  
+	    @font-face{
+    src: url(SchibstedGrotesk-Regular.ttf);
+    font-family: "Schibsted Grotesk";
+    font-weight: 400;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(SchibstedGrotesk-ExtraBold.ttf);
+    font-family: "Schibsted Grotesk";
+    font-weight: 800;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(SchibstedGrotesk-Italic.ttf);
+    font-family: "Schibsted Grotesk";
+    font-weight: 400;
+    
+    font-style: italic;
+}
+	  
+
+	  
+
+	  
+
+	  
+	    .Schibsted-Grotesk-Bold{
+    font-family: "Schibsted Grotesk";
+    font-weight: 700;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .Schibsted-Grotesk-Medium-Italic{
+    font-family: "Schibsted Grotesk";
+    font-weight: 500;
+    font-stretch: 100%;
+    font-style: italic;
+}
+	  
+	    .Schibsted-Grotesk-SemiBold{
+    font-family: "Schibsted Grotesk";
+    font-weight: 600;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .Schibsted-Grotesk-Black{
+    font-family: "Schibsted Grotesk";
+    font-weight: 900;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .Schibsted-Grotesk-Medium{
+    font-family: "Schibsted Grotesk";
+    font-weight: 500;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .Schibsted-Grotesk-Black-Italic{
+    font-family: "Schibsted Grotesk";
+    font-weight: 900;
+    font-stretch: 100%;
+    font-style: italic;
+}
+	  
+	    .Schibsted-Grotesk-SemiBold-Italic{
+    font-family: "Schibsted Grotesk";
+    font-weight: 600;
+    font-stretch: 100%;
+    font-style: italic;
+}
+	  
+	    .Schibsted-Grotesk-Bold-Italic{
+    font-family: "Schibsted Grotesk";
+    font-weight: 700;
+    font-stretch: 100%;
+    font-style: italic;
+}
+	  
+	    .Schibsted-Grotesk-ExtraBold-Italic{
+    font-family: "Schibsted Grotesk";
+    font-weight: 800;
+    font-stretch: 100%;
+    font-style: italic;
+}
+	  
+	    .Schibsted-Grotesk-Regular{
+    font-family: "Schibsted Grotesk";
+    font-weight: 400;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .Schibsted-Grotesk-ExtraBold{
+    font-family: "Schibsted Grotesk";
+    font-weight: 800;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .Schibsted-Grotesk-Italic{
+    font-family: "Schibsted Grotesk";
+    font-weight: 400;
+    font-stretch: 100%;
+    font-style: italic;
+}
+	  
+	
+    </style>
+</head>
+<body>
+    
+    <div id="content">
+	<h2>
+<b>Waterfall</b>
+</h2>
+	
+  
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold 7pt</div>
+	<span class="Schibsted-Grotesk-Bold" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold 10pt</div>
+	<span class="Schibsted-Grotesk-Bold" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold 11pt</div>
+	<span class="Schibsted-Grotesk-Bold" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold 12pt</div>
+	<span class="Schibsted-Grotesk-Bold" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold 14pt</div>
+	<span class="Schibsted-Grotesk-Bold" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold 16pt</div>
+	<span class="Schibsted-Grotesk-Bold" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold 18pt</div>
+	<span class="Schibsted-Grotesk-Bold" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold 21pt</div>
+	<span class="Schibsted-Grotesk-Bold" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold 27pt</div>
+	<span class="Schibsted-Grotesk-Bold" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold 32pt</div>
+	<span class="Schibsted-Grotesk-Bold" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium-Italic 7pt</div>
+	<span class="Schibsted-Grotesk-Medium-Italic" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium-Italic 10pt</div>
+	<span class="Schibsted-Grotesk-Medium-Italic" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium-Italic 11pt</div>
+	<span class="Schibsted-Grotesk-Medium-Italic" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium-Italic 12pt</div>
+	<span class="Schibsted-Grotesk-Medium-Italic" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium-Italic 14pt</div>
+	<span class="Schibsted-Grotesk-Medium-Italic" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium-Italic 16pt</div>
+	<span class="Schibsted-Grotesk-Medium-Italic" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium-Italic 18pt</div>
+	<span class="Schibsted-Grotesk-Medium-Italic" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium-Italic 21pt</div>
+	<span class="Schibsted-Grotesk-Medium-Italic" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium-Italic 27pt</div>
+	<span class="Schibsted-Grotesk-Medium-Italic" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium-Italic 32pt</div>
+	<span class="Schibsted-Grotesk-Medium-Italic" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold 7pt</div>
+	<span class="Schibsted-Grotesk-SemiBold" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold 10pt</div>
+	<span class="Schibsted-Grotesk-SemiBold" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold 11pt</div>
+	<span class="Schibsted-Grotesk-SemiBold" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold 12pt</div>
+	<span class="Schibsted-Grotesk-SemiBold" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold 14pt</div>
+	<span class="Schibsted-Grotesk-SemiBold" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold 16pt</div>
+	<span class="Schibsted-Grotesk-SemiBold" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold 18pt</div>
+	<span class="Schibsted-Grotesk-SemiBold" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold 21pt</div>
+	<span class="Schibsted-Grotesk-SemiBold" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold 27pt</div>
+	<span class="Schibsted-Grotesk-SemiBold" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold 32pt</div>
+	<span class="Schibsted-Grotesk-SemiBold" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black 7pt</div>
+	<span class="Schibsted-Grotesk-Black" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black 10pt</div>
+	<span class="Schibsted-Grotesk-Black" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black 11pt</div>
+	<span class="Schibsted-Grotesk-Black" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black 12pt</div>
+	<span class="Schibsted-Grotesk-Black" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black 14pt</div>
+	<span class="Schibsted-Grotesk-Black" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black 16pt</div>
+	<span class="Schibsted-Grotesk-Black" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black 18pt</div>
+	<span class="Schibsted-Grotesk-Black" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black 21pt</div>
+	<span class="Schibsted-Grotesk-Black" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black 27pt</div>
+	<span class="Schibsted-Grotesk-Black" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black 32pt</div>
+	<span class="Schibsted-Grotesk-Black" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium 7pt</div>
+	<span class="Schibsted-Grotesk-Medium" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium 10pt</div>
+	<span class="Schibsted-Grotesk-Medium" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium 11pt</div>
+	<span class="Schibsted-Grotesk-Medium" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium 12pt</div>
+	<span class="Schibsted-Grotesk-Medium" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium 14pt</div>
+	<span class="Schibsted-Grotesk-Medium" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium 16pt</div>
+	<span class="Schibsted-Grotesk-Medium" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium 18pt</div>
+	<span class="Schibsted-Grotesk-Medium" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium 21pt</div>
+	<span class="Schibsted-Grotesk-Medium" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium 27pt</div>
+	<span class="Schibsted-Grotesk-Medium" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Medium 32pt</div>
+	<span class="Schibsted-Grotesk-Medium" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black-Italic 7pt</div>
+	<span class="Schibsted-Grotesk-Black-Italic" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black-Italic 10pt</div>
+	<span class="Schibsted-Grotesk-Black-Italic" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black-Italic 11pt</div>
+	<span class="Schibsted-Grotesk-Black-Italic" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black-Italic 12pt</div>
+	<span class="Schibsted-Grotesk-Black-Italic" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black-Italic 14pt</div>
+	<span class="Schibsted-Grotesk-Black-Italic" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black-Italic 16pt</div>
+	<span class="Schibsted-Grotesk-Black-Italic" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black-Italic 18pt</div>
+	<span class="Schibsted-Grotesk-Black-Italic" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black-Italic 21pt</div>
+	<span class="Schibsted-Grotesk-Black-Italic" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black-Italic 27pt</div>
+	<span class="Schibsted-Grotesk-Black-Italic" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Black-Italic 32pt</div>
+	<span class="Schibsted-Grotesk-Black-Italic" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold-Italic 7pt</div>
+	<span class="Schibsted-Grotesk-SemiBold-Italic" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold-Italic 10pt</div>
+	<span class="Schibsted-Grotesk-SemiBold-Italic" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold-Italic 11pt</div>
+	<span class="Schibsted-Grotesk-SemiBold-Italic" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold-Italic 12pt</div>
+	<span class="Schibsted-Grotesk-SemiBold-Italic" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold-Italic 14pt</div>
+	<span class="Schibsted-Grotesk-SemiBold-Italic" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold-Italic 16pt</div>
+	<span class="Schibsted-Grotesk-SemiBold-Italic" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold-Italic 18pt</div>
+	<span class="Schibsted-Grotesk-SemiBold-Italic" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold-Italic 21pt</div>
+	<span class="Schibsted-Grotesk-SemiBold-Italic" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold-Italic 27pt</div>
+	<span class="Schibsted-Grotesk-SemiBold-Italic" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-SemiBold-Italic 32pt</div>
+	<span class="Schibsted-Grotesk-SemiBold-Italic" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold-Italic 7pt</div>
+	<span class="Schibsted-Grotesk-Bold-Italic" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold-Italic 10pt</div>
+	<span class="Schibsted-Grotesk-Bold-Italic" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold-Italic 11pt</div>
+	<span class="Schibsted-Grotesk-Bold-Italic" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold-Italic 12pt</div>
+	<span class="Schibsted-Grotesk-Bold-Italic" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold-Italic 14pt</div>
+	<span class="Schibsted-Grotesk-Bold-Italic" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold-Italic 16pt</div>
+	<span class="Schibsted-Grotesk-Bold-Italic" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold-Italic 18pt</div>
+	<span class="Schibsted-Grotesk-Bold-Italic" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold-Italic 21pt</div>
+	<span class="Schibsted-Grotesk-Bold-Italic" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold-Italic 27pt</div>
+	<span class="Schibsted-Grotesk-Bold-Italic" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Bold-Italic 32pt</div>
+	<span class="Schibsted-Grotesk-Bold-Italic" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold-Italic 7pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold-Italic" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold-Italic 10pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold-Italic" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold-Italic 11pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold-Italic" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold-Italic 12pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold-Italic" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold-Italic 14pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold-Italic" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold-Italic 16pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold-Italic" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold-Italic 18pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold-Italic" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold-Italic 21pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold-Italic" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold-Italic 27pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold-Italic" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold-Italic 32pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold-Italic" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Regular 7pt</div>
+	<span class="Schibsted-Grotesk-Regular" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Regular 10pt</div>
+	<span class="Schibsted-Grotesk-Regular" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Regular 11pt</div>
+	<span class="Schibsted-Grotesk-Regular" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Regular 12pt</div>
+	<span class="Schibsted-Grotesk-Regular" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Regular 14pt</div>
+	<span class="Schibsted-Grotesk-Regular" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Regular 16pt</div>
+	<span class="Schibsted-Grotesk-Regular" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Regular 18pt</div>
+	<span class="Schibsted-Grotesk-Regular" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Regular 21pt</div>
+	<span class="Schibsted-Grotesk-Regular" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Regular 27pt</div>
+	<span class="Schibsted-Grotesk-Regular" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Regular 32pt</div>
+	<span class="Schibsted-Grotesk-Regular" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold 7pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold 10pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold 11pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold 12pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold 14pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold 16pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold 18pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold 21pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold 27pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-ExtraBold 32pt</div>
+	<span class="Schibsted-Grotesk-ExtraBold" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Italic 7pt</div>
+	<span class="Schibsted-Grotesk-Italic" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Italic 10pt</div>
+	<span class="Schibsted-Grotesk-Italic" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Italic 11pt</div>
+	<span class="Schibsted-Grotesk-Italic" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Italic 12pt</div>
+	<span class="Schibsted-Grotesk-Italic" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Italic 14pt</div>
+	<span class="Schibsted-Grotesk-Italic" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Italic 16pt</div>
+	<span class="Schibsted-Grotesk-Italic" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Italic 18pt</div>
+	<span class="Schibsted-Grotesk-Italic" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Italic 21pt</div>
+	<span class="Schibsted-Grotesk-Italic" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Italic 27pt</div>
+	<span class="Schibsted-Grotesk-Italic" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Schibsted-Grotesk-Italic 32pt</div>
+	<span class="Schibsted-Grotesk-Italic" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+
+    </div>
+</body>
+	<script>
+
+	POSITION = "old"
+	fontToggle = document.getElementById("font-toggle")
+	function switchFonts() {
+	  items = document.getElementsByClassName("box");
+	  console.log("Click from "+POSITION)
+	  
+	  if (POSITION === "old") {
+	  POSITION = "new"
+	  for (item of items) {
+	    item.firstElementChild.textContent = item.firstElementChild.textContent.replace("old", "new")
+            item.lastElementChild.className = item.lastElementChild.className.replace("old", "new")
+	    fontToggle.textContent = "new"
+	  }
+
+	  } else {
+	  POSITION = "old"
+	  for (item of items) {
+	    item.firstElementChild.textContent = item.firstElementChild.textContent.replace("new", "old")
+            item.lastElementChild.className = item.lastElementChild.className.replace("new", "old")
+	    fontToggle.textContent = "old"
+	  }
+	}
+	}
+	if (fontToggle !== null) {
+		fontToggle.addEventListener("click", switchFonts);
+	}
+
+    const divs = document.querySelectorAll('.node');
+    divs.forEach(el => el.addEventListener('click', event => {
+    var children = event.target.querySelectorAll(".node");
+    children.forEach(function(e) {
+        if (e.style.display === "none") {
+            e.style.display = "block";
+        } else {
+            e.style.display = "none";
+        }
+    })
+    }));
+    
+	
+
+    </script>
+</html>

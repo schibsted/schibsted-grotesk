@@ -1,0 +1,3020 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Fontbakery Check Report</title>
+                        <style>
+                            
+            html {
+                font-family: sans-serif;
+            }
+
+            h2 {
+                margin-top: 2em;
+            }
+
+            h3 {
+                margin-bottom: 1px;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            th,
+            td {
+                border: 1px solid #ddd;
+                padding: 0.5em
+            }
+
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            tr {
+                text-align: left;
+            }
+
+            ul {
+                margin-top: 0;
+            }
+
+            .details_item {
+                list-style: none;
+                display: flex;
+                align-items: baseline;
+            }
+
+            .details_indicator {
+                flex: 0 0 5em;
+                font-weight: bold;
+                padding-right: 0.5em;
+                text-align: right;
+            }
+
+            .details_text {
+                flex: 1 0;
+            }
+            
+                        </style>
+                    </head>
+                    <body>
+                    <h1>Fontbakery Technical Report</h1>
+<div>If you think a check is flawed or have an idea for a check, please  file an issue at <a href='https://github.com/googlefonts/fontbakery/issues'>https://github.com/googlefonts/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</div>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>130</td>
+                <td>1316</td>
+                <td>73</td>
+                <td>1040</td>
+            </tr>
+            <tr>
+                <td>0%</td>
+                <td>0%</td>
+                <td>7%</td>
+                <td>68%</td>
+                <td>4%</td>
+                <td>54%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+<h2>&lt;Section: Google Fonts&gt; ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</h2>
+<h3>Checking OS/2 achVendID.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'BBT�' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-MediumItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'BBT�' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'BBT�' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'BBT�' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'BBT�' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BlackItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'BBT�' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'BBT�' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'BBT�' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'BBT�' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'BBT�' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'BBT�' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Italic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'BBT�' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<h3>Are there caret positions declared for every ligature?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/ligature_carets&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-MediumItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BlackItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Italic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<h3>Is there kerning info for non-ligated sequences?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/kerning_for_non_ligated_sequences&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + i
+
+- i + f
+
+- f + l
+
+- l + f 
+
+- And i + l [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-MediumItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + i
+
+- i + f
+
+- f + l
+
+- l + f 
+
+- And i + l [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + i
+
+- i + f
+
+- f + l
+
+- l + f 
+
+- And i + l [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + i
+
+- i + f
+
+- f + l
+
+- l + f 
+
+- And i + l [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + i
+
+- i + f
+
+- f + l
+
+- l + f 
+
+- And i + l [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BlackItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + i
+
+- i + f
+
+- f + l
+
+- l + f 
+
+- And i + l [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + i
+
+- i + f
+
+- f + l
+
+- l + f 
+
+- And i + l [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + i
+
+- i + f
+
+- f + l
+
+- l + f 
+
+- And i + l [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + i
+
+- i + f
+
+- f + l
+
+- l + f 
+
+- And i + l [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + i
+
+- i + f
+
+- f + l
+
+- l + f 
+
+- And i + l [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + i
+
+- i + f
+
+- f + l
+
+- l + f 
+
+- And i + l [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Italic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + i
+
+- i + f
+
+- f + l
+
+- l + f 
+
+- And i + l [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<h3>Combined length of family and style must not exceed 27 characters.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/family_and_style_max_length&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-MediumItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Schibsted Grotesk Medium' / SUBFAMILY_NAME = 'Italic'</p>
+<p>Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Schibsted Grotesk SemiBold' / SUBFAMILY_NAME = 'Regular'</p>
+<p>Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Schibsted Grotesk Black' / SUBFAMILY_NAME = 'Regular'</p>
+<p>Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Schibsted Grotesk Medium' / SUBFAMILY_NAME = 'Regular'</p>
+<p>Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BlackItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Schibsted Grotesk Black' / SUBFAMILY_NAME = 'Italic'</p>
+<p>Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Schibsted Grotesk SemiBold' / SUBFAMILY_NAME = 'Italic'</p>
+<p>Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Schibsted Grotesk' / SUBFAMILY_NAME = 'Bold Italic'</p>
+<p>Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Schibsted Grotesk ExtraBold' / SUBFAMILY_NAME = 'Italic'</p>
+<p>Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Schibsted Grotesk ExtraBold' / SUBFAMILY_NAME = 'Regular'</p>
+<p>Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-MediumItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BlackItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Italic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h2>&lt;Section: Universal&gt; ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</h2>
+<h3>Check font contains no unreachable glyphs</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- uni0308.alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-MediumItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- uni0308.alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- uni0308.alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- uni0308.alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- uni0308.alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BlackItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- uni0308.alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- uni0308.alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- uni0308.alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- uni0308.alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- uni0308.alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- uni0308.alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Italic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- uni0308.alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check if each glyph has the recommended amount of contours.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni01EA	Contours detected: 3	Expected: 2
+
+- Glyph name: uni01EB	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-MediumItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni01EA	Contours detected: 3	Expected: 2
+
+- Glyph name: uni01EB	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni01EA	Contours detected: 3	Expected: 2
+
+- Glyph name: uni01EB	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni01EA	Contours detected: 3	Expected: 2
+
+- Glyph name: uni01EB	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni01EA	Contours detected: 3	Expected: 2
+
+- Glyph name: uni01EB	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BlackItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: ae	Contours detected: 4	Expected: 3
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni01EA	Contours detected: 3	Expected: 2
+
+- Glyph name: uni01EB	Contours detected: 3	Expected: 2
+
+- Glyph name: aeacute	Contours detected: 5	Expected: 4
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: ae	Contours detected: 4	Expected: 3
+
+- Glyph name: aeacute	Contours detected: 5	Expected: 4
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni01EA	Contours detected: 3	Expected: 2
+
+- Glyph name: uni01EB	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni01EA	Contours detected: 3	Expected: 2
+
+- Glyph name: uni01EB	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni01EA	Contours detected: 3	Expected: 2
+
+- Glyph name: uni01EB	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni01EA	Contours detected: 3	Expected: 2
+
+- Glyph name: uni01EB	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni01EA	Contours detected: 3	Expected: 2
+
+- Glyph name: uni01EB	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Italic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni01EA	Contours detected: 3	Expected: 2
+
+- Glyph name: uni01EB	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3
+
+- Glyph name: Dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Eth	Contours detected: 3	Expected: 2
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 3	Expected: 2
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: uni019D	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0272	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0E3F	Contours detected: 5	Expected: 3 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<h3>Ensure dotted circle glyph is present and can attach marks.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-MediumItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BlackItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Italic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+</span></li></ul></div></details>
+<h2>&lt;Section: Outline Correctness Checks&gt; ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩</h2>
+<h3>Are there any misaligned on-curve points?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_alignment_miss&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* two (U+0032): X=788.5,Y=1441.0 (should be at cap-height 1440?)
+
+* question (U+003F): X=768.0,Y=1439.5 (should be at cap-height 1440?)
+
+* at (U+0040): X=1002.0,Y=-1.0 (should be at baseline 0?)
+
+* at (U+0040): X=1621.0,Y=-1.0 (should be at baseline 0?)
+
+* e (U+0065): X=811.5,Y=1078.5 (should be at x-height 1080?)
+
+* g (U+0067): X=396.0,Y=-1.0 (should be at baseline 0?)
+
+* braceleft (U+007B): X=247.0,Y=1441.5 (should be at cap-height 1440?)
+
+* bar (U+007C): X=142.0,Y=1442.0 (should be at cap-height 1440?)
+
+* bar (U+007C): X=417.0,Y=1442.0 (should be at cap-height 1440?)
+
+* braceright (U+007D): X=489.0,Y=1441.5 (should be at cap-height 1440?)
+
+* brokenbar (U+00A6): X=120.0,Y=1442.0 (should be at cap-height 1440?)
+
+* brokenbar (U+00A6): X=395.0,Y=1442.0 (should be at cap-height 1440?)
+
+* section (U+00A7): X=1233.0,Y=-2.0 (should be at baseline 0?)
+
+* gcircumflex (U+011D): X=396.0,Y=-1.0 (should be at baseline 0?)
+
+* gbreve (U+011F): X=396.0,Y=-1.0 (should be at baseline 0?)
+
+* gdotaccent (U+0121): X=396.0,Y=-1.0 (should be at baseline 0?)
+
+* uni0122 (U+0122): X=691.0,Y=-527.0 (should be at descender -528?)
+
+* uni0123 (U+0123): X=396.0,Y=-1.0 (should be at baseline 0?)
+
+* uni0136 (U+0136): X=665.0,Y=-527.0 (should be at descender -528?)
+
+* uni0137 (U+0137): X=545.0,Y=-527.0 (should be at descender -528?)
+
+* uni013B (U+013B): X=548.0,Y=-527.0 (should be at descender -528?)
+
+* uni013C (U+013C): X=231.0,Y=-527.0 (should be at descender -528?)
+
+* uni0145 (U+0145): X=697.0,Y=-527.0 (should be at descender -528?)
+
+* uni0146 (U+0146): X=550.0,Y=-527.0 (should be at descender -528?)
+
+* uni0156 (U+0156): X=626.0,Y=-527.0 (should be at descender -528?)
+
+* uni0157 (U+0157): X=201.0,Y=-527.0 (should be at descender -528?)
+
+* gcaron (U+01E7): X=396.0,Y=-1.0 (should be at baseline 0?)
+
+* uni0218 (U+0218): X=579.0,Y=-527.0 (should be at descender -528?)
+
+* uni0219 (U+0219): X=476.0,Y=-527.0 (should be at descender -528?)
+
+* uni021A (U+021A): X=617.0,Y=-527.0 (should be at descender -528?)
+
+* uni021B (U+021B): X=380.0,Y=-527.0 (should be at descender -528?)
+
+* uni0259 (U+0259): X=409.5,Y=1.5 (should be at baseline 0?)
+
+* uni0326 (U+0326): X=425.0,Y=-527.0 (should be at descender -528?)
+
+* lozenge (U+25CA): X=565.0,Y=2.0 (should be at baseline 0?)
+
+* lozenge (U+25CA): X=567.0,Y=1438.0 (should be at cap-height 1440?)
+
+* lozenge (U+25CA): X=734.0,Y=1438.0 (should be at cap-height 1440?) 
+
+* And lozenge (U+25CA): X=736.0,Y=2.0 (should be at baseline 0?) [code: found-misalignments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-MediumItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* ampersand (U+0026): X=1216.0,Y=-1.0 (should be at baseline 0?)
+
+* two (U+0032): X=886.0,Y=1441.0 (should be at cap-height 1440?)
+
+* Z (U+005A): X=-57.0,Y=-1.0 (should be at baseline 0?)
+
+* Z (U+005A): X=274.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Z (U+005A): X=1313.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Z (U+005A): X=1015.0,Y=-1.0 (should be at baseline 0?)
+
+* uni00B2 (U+00B2): X=643.5,Y=1441.0 (should be at cap-height 1440?)
+
+* uni00B3 (U+00B3): X=637.5,Y=1438.5 (should be at cap-height 1440?)
+
+* germandbls (U+00DF): X=433.5,Y=0.5 (should be at baseline 0?)
+
+* abreve (U+0103): X=599.5,Y=1439.5 (should be at cap-height 1440?)
+
+* ebreve (U+0115): X=566.5,Y=1439.5 (should be at cap-height 1440?)
+
+* gbreve (U+011F): X=541.5,Y=1439.5 (should be at cap-height 1440?)
+
+* ibreve (U+012D): X=285.5,Y=1439.5 (should be at cap-height 1440?)
+
+* obreve (U+014F): X=593.5,Y=1439.5 (should be at cap-height 1440?)
+
+* ubreve (U+016D): X=601.5,Y=1439.5 (should be at cap-height 1440?)
+
+* Zacute (U+0179): X=-57.0,Y=-1.0 (should be at baseline 0?)
+
+* Zacute (U+0179): X=274.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Zacute (U+0179): X=1313.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Zacute (U+0179): X=1015.0,Y=-1.0 (should be at baseline 0?)
+
+* Zdotaccent (U+017B): X=-57.0,Y=-1.0 (should be at baseline 0?)
+
+* Zdotaccent (U+017B): X=274.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Zdotaccent (U+017B): X=1313.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Zdotaccent (U+017B): X=1015.0,Y=-1.0 (should be at baseline 0?)
+
+* Zcaron (U+017D): X=-57.0,Y=-1.0 (should be at baseline 0?)
+
+* Zcaron (U+017D): X=274.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Zcaron (U+017D): X=1313.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Zcaron (U+017D): X=1015.0,Y=-1.0 (should be at baseline 0?)
+
+* breve (U+02D8): X=567.5,Y=1439.5 (should be at cap-height 1440?)
+
+* uni0306 (U+0306): X=567.5,Y=1439.5 (should be at cap-height 1440?) 
+
+* And uni2078 (U+2078): X=459.5,Y=1440.5 (should be at cap-height 1440?) [code: found-misalignments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* two (U+0032): X=772.5,Y=1440.5 (should be at cap-height 1440?)
+
+* question (U+003F): X=748.5,Y=1439.0 (should be at cap-height 1440?)
+
+* f (U+0066): X=261.5,Y=1441.5 (should be at cap-height 1440?)
+
+* bar (U+007C): X=151.0,Y=1441.0 (should be at cap-height 1440?)
+
+* bar (U+007C): X=382.0,Y=1441.0 (should be at cap-height 1440?)
+
+* brokenbar (U+00A6): X=129.0,Y=1441.0 (should be at cap-height 1440?)
+
+* brokenbar (U+00A6): X=360.0,Y=1441.0 (should be at cap-height 1440?)
+
+* degree (U+00B0): X=462.0,Y=1442.0 (should be at cap-height 1440?)
+
+* uni0123 (U+0123): X=681.5,Y=1442.0 (should be at cap-height 1440?)
+
+* uni02BB (U+02BB): X=625.5,Y=1442.0 (should be at cap-height 1440?)
+
+* uni0312 (U+0312): X=625.5,Y=1442.0 (should be at cap-height 1440?)
+
+* uni2078 (U+2078): X=489.0,Y=1438.0 (should be at cap-height 1440?)
+
+* uni2078 (U+2078): X=309.5,Y=1438.0 (should be at cap-height 1440?)
+
+* lozenge (U+25CA): X=573.0,Y=1.0 (should be at baseline 0?)
+
+* lozenge (U+25CA): X=574.0,Y=1439.0 (should be at cap-height 1440?)
+
+* lozenge (U+25CA): X=727.0,Y=1439.0 (should be at cap-height 1440?)
+
+* lozenge (U+25CA): X=728.0,Y=1.0 (should be at baseline 0?)
+
+* fi (U+FB01): X=261.5,Y=1441.5 (should be at cap-height 1440?) 
+
+* And fl (U+FB02): X=261.5,Y=1441.5 (should be at cap-height 1440?) [code: found-misalignments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* three (U+0033): X=859.5,Y=-1.0 (should be at baseline 0?)
+
+* question (U+003F): X=808.5,Y=1440.5 (should be at cap-height 1440?)
+
+* e (U+0065): X=847.5,Y=1081.0 (should be at x-height 1080?)
+
+* braceleft (U+007B): X=530.0,Y=-2.0 (should be at baseline 0?)
+
+* braceright (U+007D): X=258.0,Y=-2.0 (should be at baseline 0?)
+
+* uni00B5 (U+00B5): X=585.5,Y=2.0 (should be at baseline 0?)
+
+* Acircumflex (U+00C2): X=618.0,Y=2002.0 (should be at ascender 2000?)
+
+* Acircumflex (U+00C2): X=957.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ecircumflex (U+00CA): X=494.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ecircumflex (U+00CA): X=833.0,Y=2002.0 (should be at ascender 2000?)
+
+* Icircumflex (U+00CE): X=326.0,Y=2002.0 (should be at ascender 2000?)
+
+* Icircumflex (U+00CE): X=665.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ocircumflex (U+00D4): X=616.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ocircumflex (U+00D4): X=955.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ucircumflex (U+00DB): X=602.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ucircumflex (U+00DB): X=941.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ccircumflex (U+0108): X=613.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ccircumflex (U+0108): X=952.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ccaron (U+010C): X=617.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ccaron (U+010C): X=952.0,Y=2002.0 (should be at ascender 2000?)
+
+* Dcaron (U+010E): X=549.0,Y=2002.0 (should be at ascender 2000?)
+
+* Dcaron (U+010E): X=884.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ecaron (U+011A): X=498.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ecaron (U+011A): X=833.0,Y=2002.0 (should be at ascender 2000?)
+
+* Gcircumflex (U+011C): X=614.0,Y=2002.0 (should be at ascender 2000?)
+
+* Gcircumflex (U+011C): X=953.0,Y=2002.0 (should be at ascender 2000?)
+
+* Hcircumflex (U+0124): X=629.0,Y=2002.0 (should be at ascender 2000?)
+
+* Hcircumflex (U+0124): X=968.0,Y=2002.0 (should be at ascender 2000?)
+
+* Jcircumflex (U+0134): X=522.0,Y=2002.0 (should be at ascender 2000?)
+
+* Jcircumflex (U+0134): X=861.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ncaron (U+0147): X=652.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ncaron (U+0147): X=987.0,Y=2002.0 (should be at ascender 2000?)
+
+* Rcaron (U+0158): X=536.0,Y=2002.0 (should be at ascender 2000?)
+
+* Rcaron (U+0158): X=871.0,Y=2002.0 (should be at ascender 2000?)
+
+* Scircumflex (U+015C): X=525.0,Y=2002.0 (should be at ascender 2000?)
+
+* Scircumflex (U+015C): X=864.0,Y=2002.0 (should be at ascender 2000?)
+
+* Scaron (U+0160): X=529.0,Y=2002.0 (should be at ascender 2000?)
+
+* Scaron (U+0160): X=864.0,Y=2002.0 (should be at ascender 2000?)
+
+* Tcaron (U+0164): X=577.0,Y=2002.0 (should be at ascender 2000?)
+
+* Tcaron (U+0164): X=912.0,Y=2002.0 (should be at ascender 2000?)
+
+* Wcircumflex (U+0174): X=924.0,Y=2002.0 (should be at ascender 2000?)
+
+* Wcircumflex (U+0174): X=1263.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ycircumflex (U+0176): X=535.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ycircumflex (U+0176): X=874.0,Y=2002.0 (should be at ascender 2000?)
+
+* Zcaron (U+017D): X=542.0,Y=2002.0 (should be at ascender 2000?)
+
+* Zcaron (U+017D): X=877.0,Y=2002.0 (should be at ascender 2000?)
+
+* uni01CD (U+01CD): X=622.0,Y=2002.0 (should be at ascender 2000?)
+
+* uni01CD (U+01CD): X=957.0,Y=2002.0 (should be at ascender 2000?)
+
+* Gcaron (U+01E6): X=618.0,Y=2002.0 (should be at ascender 2000?)
+
+* Gcaron (U+01E6): X=953.0,Y=2002.0 (should be at ascender 2000?)
+
+* uni0259 (U+0259): X=411.5,Y=-1.0 (should be at baseline 0?)
+
+* uni03BC (U+03BC): X=585.5,Y=2.0 (should be at baseline 0?) 
+
+* And uni2076 (U+2076): X=122.0,Y=1441.5 (should be at cap-height 1440?) [code: found-misalignments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* two (U+0032): X=758.0,Y=1440.5 (should be at cap-height 1440?)
+
+* question (U+003F): X=731.0,Y=1439.0 (should be at cap-height 1440?)
+
+* g (U+0067): X=741.0,Y=1081.0 (should be at x-height 1080?) 
+
+* And section (U+00A7): X=59.0,Y=-2.0 (should be at baseline 0?) [code: found-misalignments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BlackItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* ampersand (U+0026): X=696.5,Y=-1.5 (should be at baseline 0?)
+
+* two (U+0032): X=926.5,Y=1440.5 (should be at cap-height 1440?)
+
+* question (U+003F): X=956.0,Y=1439.5 (should be at cap-height 1440?)
+
+* S (U+0053): X=973.0,Y=1439.0 (should be at cap-height 1440?)
+
+* g (U+0067): X=788.0,Y=1079.0 (should be at x-height 1080?)
+
+* braceleft (U+007B): X=388.0,Y=-2.0 (should be at baseline 0?)
+
+* braceright (U+007D): X=129.0,Y=-2.0 (should be at baseline 0?)
+
+* ordfeminine (U+00AA): X=593.0,Y=1441.0 (should be at cap-height 1440?)
+
+* Acircumflex (U+00C2): X=892.0,Y=2002.0 (should be at ascender 2000?)
+
+* Acircumflex (U+00C2): X=1231.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ecircumflex (U+00CA): X=738.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ecircumflex (U+00CA): X=1077.0,Y=2002.0 (should be at ascender 2000?)
+
+* Icircumflex (U+00CE): X=592.0,Y=2002.0 (should be at ascender 2000?)
+
+* Icircumflex (U+00CE): X=931.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ocircumflex (U+00D4): X=871.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ocircumflex (U+00D4): X=1210.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ucircumflex (U+00DB): X=861.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ucircumflex (U+00DB): X=1200.0,Y=2002.0 (should be at ascender 2000?)
+
+* germandbls (U+00DF): X=1178.0,Y=1441.0 (should be at cap-height 1440?)
+
+* ae (U+00E6): X=197.5,Y=-1.0 (should be at baseline 0?)
+
+* Ccircumflex (U+0108): X=817.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ccircumflex (U+0108): X=1156.0,Y=2002.0 (should be at ascender 2000?)
+
+* Gcircumflex (U+011C): X=812.0,Y=2002.0 (should be at ascender 2000?)
+
+* Gcircumflex (U+011C): X=1151.0,Y=2002.0 (should be at ascender 2000?)
+
+* Hcircumflex (U+0124): X=888.0,Y=2002.0 (should be at ascender 2000?)
+
+* Hcircumflex (U+0124): X=1227.0,Y=2002.0 (should be at ascender 2000?)
+
+* Jcircumflex (U+0134): X=740.0,Y=2002.0 (should be at ascender 2000?)
+
+* Jcircumflex (U+0134): X=1079.0,Y=2002.0 (should be at ascender 2000?)
+
+* Sacute (U+015A): X=973.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Scircumflex (U+015C): X=973.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Scircumflex (U+015C): X=778.0,Y=2002.0 (should be at ascender 2000?)
+
+* Scircumflex (U+015C): X=1117.0,Y=2002.0 (should be at ascender 2000?)
+
+* Scedilla (U+015E): X=973.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Scaron (U+0160): X=973.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Wcircumflex (U+0174): X=1138.0,Y=2002.0 (should be at ascender 2000?)
+
+* Wcircumflex (U+0174): X=1477.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ycircumflex (U+0176): X=746.0,Y=2002.0 (should be at ascender 2000?)
+
+* Ycircumflex (U+0176): X=1085.0,Y=2002.0 (should be at ascender 2000?)
+
+* aeacute (U+01FD): X=197.5,Y=-1.0 (should be at baseline 0?)
+
+* uni0218 (U+0218): X=973.0,Y=1439.0 (should be at cap-height 1440?)
+
+* beta (U+03B2): X=1182.0,Y=1441.0 (should be at cap-height 1440?)
+
+* trademark (U+2122): X=229.0,Y=1441.0 (should be at cap-height 1440?) 
+
+* And trademark (U+2122): X=947.0,Y=1441.0 (should be at cap-height 1440?) [code: found-misalignments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* ampersand (U+0026): X=1215.0,Y=-1.0 (should be at baseline 0?)
+
+* two (U+0032): X=895.5,Y=1440.5 (should be at cap-height 1440?)
+
+* Z (U+005A): X=-60.0,Y=-1.0 (should be at baseline 0?)
+
+* Z (U+005A): X=271.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Z (U+005A): X=1336.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Z (U+005A): X=1045.0,Y=-1.0 (should be at baseline 0?)
+
+* g (U+0067): X=678.5,Y=-0.5 (should be at baseline 0?)
+
+* bar (U+007C): X=332.0,Y=1441.0 (should be at cap-height 1440?)
+
+* bar (U+007C): X=562.0,Y=1441.0 (should be at cap-height 1440?)
+
+* brokenbar (U+00A6): X=311.0,Y=1441.0 (should be at cap-height 1440?)
+
+* brokenbar (U+00A6): X=541.0,Y=1441.0 (should be at cap-height 1440?)
+
+* section (U+00A7): X=586.0,Y=1441.5 (should be at cap-height 1440?)
+
+* degree (U+00B0): X=594.0,Y=1438.0 (should be at cap-height 1440?)
+
+* germandbls (U+00DF): X=463.5,Y=2.0 (should be at baseline 0?)
+
+* gcircumflex (U+011D): X=678.5,Y=-0.5 (should be at baseline 0?)
+
+* gbreve (U+011F): X=678.5,Y=-0.5 (should be at baseline 0?)
+
+* gdotaccent (U+0121): X=678.5,Y=-0.5 (should be at baseline 0?)
+
+* uni0122 (U+0122): X=565.0,Y=-526.0 (should be at descender -528?)
+
+* uni0123 (U+0123): X=678.5,Y=-0.5 (should be at baseline 0?)
+
+* Zacute (U+0179): X=-60.0,Y=-1.0 (should be at baseline 0?)
+
+* Zacute (U+0179): X=271.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Zacute (U+0179): X=1336.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Zacute (U+0179): X=1045.0,Y=-1.0 (should be at baseline 0?)
+
+* Zdotaccent (U+017B): X=-60.0,Y=-1.0 (should be at baseline 0?)
+
+* Zdotaccent (U+017B): X=271.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Zdotaccent (U+017B): X=1336.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Zdotaccent (U+017B): X=1045.0,Y=-1.0 (should be at baseline 0?)
+
+* Zcaron (U+017D): X=-60.0,Y=-1.0 (should be at baseline 0?)
+
+* Zcaron (U+017D): X=271.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Zcaron (U+017D): X=1336.0,Y=1439.0 (should be at cap-height 1440?)
+
+* Zcaron (U+017D): X=1045.0,Y=-1.0 (should be at baseline 0?)
+
+* gcaron (U+01E7): X=678.5,Y=-0.5 (should be at baseline 0?)
+
+* uni2078 (U+2078): X=653.0,Y=1440.5 (should be at cap-height 1440?)
+
+* lozenge (U+25CA): X=613.0,Y=1.0 (should be at baseline 0?)
+
+* lozenge (U+25CA): X=616.0,Y=1439.0 (should be at cap-height 1440?)
+
+* lozenge (U+25CA): X=769.0,Y=1439.0 (should be at cap-height 1440?) 
+
+* And lozenge (U+25CA): X=770.0,Y=1.0 (should be at baseline 0?) [code: found-misalignments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* two (U+0032): X=905.5,Y=1440.5 (should be at cap-height 1440?)
+
+* at (U+0040): X=1030.0,Y=-1.0 (should be at baseline 0?)
+
+* at (U+0040): X=1649.0,Y=-1.0 (should be at baseline 0?)
+
+* Q (U+0051): X=513.0,Y=2.0 (should be at baseline 0?)
+
+* Z (U+005A): X=-63.0,Y=-2.0 (should be at baseline 0?)
+
+* Z (U+005A): X=268.0,Y=1438.0 (should be at cap-height 1440?)
+
+* Z (U+005A): X=1362.0,Y=1438.0 (should be at cap-height 1440?)
+
+* Z (U+005A): X=1078.0,Y=-2.0 (should be at baseline 0?)
+
+* braceleft (U+007B): X=422.0,Y=1441.0 (should be at cap-height 1440?)
+
+* bar (U+007C): X=324.0,Y=1442.0 (should be at cap-height 1440?)
+
+* bar (U+007C): X=596.0,Y=1442.0 (should be at cap-height 1440?)
+
+* braceright (U+007D): X=654.5,Y=1441.0 (should be at cap-height 1440?)
+
+* brokenbar (U+00A6): X=303.0,Y=1442.0 (should be at cap-height 1440?)
+
+* brokenbar (U+00A6): X=574.0,Y=1442.0 (should be at cap-height 1440?)
+
+* section (U+00A7): X=576.0,Y=1438.5 (should be at cap-height 1440?)
+
+* uni0136 (U+0136): X=466.0,Y=-526.0 (should be at descender -528?)
+
+* uni0137 (U+0137): X=317.0,Y=-526.0 (should be at descender -528?)
+
+* uni013B (U+013B): X=335.0,Y=-526.0 (should be at descender -528?)
+
+* uni013C (U+013C): X=32.0,Y=-526.0 (should be at descender -528?)
+
+* uni0145 (U+0145): X=467.0,Y=-526.0 (should be at descender -528?)
+
+* uni0146 (U+0146): X=319.0,Y=-526.0 (should be at descender -528?)
+
+* napostrophe (U+0149): X=358.0,Y=1441.0 (should be at cap-height 1440?)
+
+* uni0156 (U+0156): X=380.0,Y=-526.0 (should be at descender -528?)
+
+* uni0157 (U+0157): X=-13.0,Y=-526.0 (should be at descender -528?)
+
+* Zacute (U+0179): X=-63.0,Y=-2.0 (should be at baseline 0?)
+
+* Zacute (U+0179): X=268.0,Y=1438.0 (should be at cap-height 1440?)
+
+* Zacute (U+0179): X=1362.0,Y=1438.0 (should be at cap-height 1440?)
+
+* Zacute (U+0179): X=1078.0,Y=-2.0 (should be at baseline 0?)
+
+* Zdotaccent (U+017B): X=-63.0,Y=-2.0 (should be at baseline 0?)
+
+* Zdotaccent (U+017B): X=268.0,Y=1438.0 (should be at cap-height 1440?)
+
+* Zdotaccent (U+017B): X=1362.0,Y=1438.0 (should be at cap-height 1440?)
+
+* Zdotaccent (U+017B): X=1078.0,Y=-2.0 (should be at baseline 0?)
+
+* Zcaron (U+017D): X=-63.0,Y=-2.0 (should be at baseline 0?)
+
+* Zcaron (U+017D): X=268.0,Y=1438.0 (should be at cap-height 1440?)
+
+* Zcaron (U+017D): X=1362.0,Y=1438.0 (should be at cap-height 1440?)
+
+* Zcaron (U+017D): X=1078.0,Y=-2.0 (should be at baseline 0?)
+
+* uni0218 (U+0218): X=399.0,Y=-526.0 (should be at descender -528?)
+
+* uni0219 (U+0219): X=273.0,Y=-526.0 (should be at descender -528?)
+
+* uni021A (U+021A): X=367.0,Y=-526.0 (should be at descender -528?)
+
+* uni021B (U+021B): X=139.0,Y=-526.0 (should be at descender -528?)
+
+* uni02BC (U+02BC): X=408.0,Y=1441.0 (should be at cap-height 1440?)
+
+* uni0326 (U+0326): X=206.0,Y=-526.0 (should be at descender -528?)
+
+* quoteright (U+2019): X=408.0,Y=1441.0 (should be at cap-height 1440?)
+
+* quotedblright (U+201D): X=408.0,Y=1441.0 (should be at cap-height 1440?)
+
+* quotedblright (U+201D): X=875.0,Y=1441.0 (should be at cap-height 1440?)
+
+* trademark (U+2122): X=255.0,Y=1441.0 (should be at cap-height 1440?)
+
+* trademark (U+2122): X=932.0,Y=1441.0 (should be at cap-height 1440?)
+
+* partialdiff (U+2202): X=699.0,Y=1438.5 (should be at cap-height 1440?)
+
+* uni2460 (U+2460): X=1136.0,Y=1441.0 (should be at cap-height 1440?)
+
+* uni2461 (U+2461): X=1136.0,Y=1441.0 (should be at cap-height 1440?)
+
+* uni2462 (U+2462): X=1136.0,Y=1441.0 (should be at cap-height 1440?)
+
+* uni2463 (U+2463): X=1136.0,Y=1441.0 (should be at cap-height 1440?)
+
+* uni2464 (U+2464): X=1136.0,Y=1441.0 (should be at cap-height 1440?)
+
+* uni2465 (U+2465): X=1136.0,Y=1441.0 (should be at cap-height 1440?)
+
+* uni2466 (U+2466): X=1136.0,Y=1441.0 (should be at cap-height 1440?)
+
+* uni2467 (U+2467): X=1136.0,Y=1441.0 (should be at cap-height 1440?)
+
+* uni2468 (U+2468): X=1136.0,Y=1441.0 (should be at cap-height 1440?)
+
+* uni24EA (U+24EA): X=1136.0,Y=1441.0 (should be at cap-height 1440?)
+
+* lozenge (U+25CA): X=606.0,Y=2.0 (should be at baseline 0?)
+
+* lozenge (U+25CA): X=609.0,Y=1438.0 (should be at cap-height 1440?)
+
+* lozenge (U+25CA): X=776.0,Y=1438.0 (should be at cap-height 1440?) 
+
+* And lozenge (U+25CA): X=778.0,Y=2.0 (should be at baseline 0?) [code: found-misalignments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* two (U+0032): X=916.0,Y=1440.5 (should be at cap-height 1440?)
+
+* bar (U+007C): X=315.0,Y=1442.0 (should be at cap-height 1440?)
+
+* bar (U+007C): X=631.0,Y=1442.0 (should be at cap-height 1440?)
+
+* brokenbar (U+00A6): X=294.0,Y=1442.0 (should be at cap-height 1440?)
+
+* brokenbar (U+00A6): X=609.0,Y=1442.0 (should be at cap-height 1440?)
+
+* ordfeminine (U+00AA): X=589.0,Y=1442.0 (should be at cap-height 1440?)
+
+* ae (U+00E6): X=194.0,Y=1.0 (should be at baseline 0?)
+
+* uni0122 (U+0122): X=585.0,Y=-529.0 (should be at descender -528?)
+
+* napostrophe (U+0149): X=352.0,Y=1438.0 (should be at cap-height 1440?)
+
+* Ohungarumlaut (U+0150): X=893.0,Y=1999.0 (should be at ascender 2000?)
+
+* Uhungarumlaut (U+0170): X=871.0,Y=1999.0 (should be at ascender 2000?)
+
+* aeacute (U+01FD): X=194.0,Y=1.0 (should be at baseline 0?)
+
+* uni02BC (U+02BC): X=404.0,Y=1438.0 (should be at cap-height 1440?)
+
+* quoteright (U+2019): X=404.0,Y=1438.0 (should be at cap-height 1440?)
+
+* quotedblright (U+201D): X=404.0,Y=1438.0 (should be at cap-height 1440?)
+
+* quotedblright (U+201D): X=919.0,Y=1438.0 (should be at cap-height 1440?)
+
+* trademark (U+2122): X=242.0,Y=1441.0 (should be at cap-height 1440?)
+
+* trademark (U+2122): X=940.0,Y=1441.0 (should be at cap-height 1440?)
+
+* lozenge (U+25CA): X=598.0,Y=2.0 (should be at baseline 0?)
+
+* lozenge (U+25CA): X=601.0,Y=1438.0 (should be at cap-height 1440?)
+
+* lozenge (U+25CA): X=784.0,Y=1438.0 (should be at cap-height 1440?) 
+
+* And lozenge (U+25CA): X=786.0,Y=2.0 (should be at baseline 0?) [code: found-misalignments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* g (U+0067): X=741.0,Y=1078.0 (should be at x-height 1080?)
+
+* r (U+0072): X=763.0,Y=1082.0 (should be at x-height 1080?)
+
+* uni00B3 (U+00B3): X=258.5,Y=1438.5 (should be at cap-height 1440?)
+
+* eth (U+00F0): X=884.0,Y=1438.0 (should be at cap-height 1440?)
+
+* uni2079 (U+2079): X=506.5,Y=1439.5 (should be at cap-height 1440?) 
+
+* And uni2079 (U+2079): X=263.0,Y=1438.0 (should be at cap-height 1440?) [code: found-misalignments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* two (U+0032): X=805.0,Y=1442.0 (should be at cap-height 1440?)
+
+* three (U+0033): X=842.0,Y=-0.5 (should be at baseline 0?)
+
+* bar (U+007C): X=133.0,Y=1442.0 (should be at cap-height 1440?)
+
+* bar (U+007C): X=454.0,Y=1442.0 (should be at cap-height 1440?)
+
+* brokenbar (U+00A6): X=111.0,Y=1442.0 (should be at cap-height 1440?)
+
+* brokenbar (U+00A6): X=432.0,Y=1442.0 (should be at cap-height 1440?)
+
+* Ohungarumlaut (U+0150): X=670.0,Y=1998.0 (should be at ascender 2000?)
+
+* Uhungarumlaut (U+0170): X=638.0,Y=1998.0 (should be at ascender 2000?)
+
+* lozenge (U+25CA): X=557.0,Y=2.0 (should be at baseline 0?)
+
+* lozenge (U+25CA): X=559.0,Y=1438.0 (should be at cap-height 1440?)
+
+* lozenge (U+25CA): X=742.0,Y=1438.0 (should be at cap-height 1440?) 
+
+* And lozenge (U+25CA): X=744.0,Y=2.0 (should be at baseline 0?) [code: found-misalignments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Italic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* ampersand (U+0026): X=1218.0,Y=-1.0 (should be at baseline 0?)
+
+* eth (U+00F0): X=449.0,Y=1439.0 (should be at cap-height 1440?)
+
+* uni2076 (U+2076): X=686.0,Y=1439.0 (should be at cap-height 1440?) 
+
+* And partialdiff (U+2202): X=453.0,Y=1439.0 (should be at cap-height 1440?) [code: found-misalignments]
+</code></pre>
+</span></li></ul></div></details>
+<h3>Are any segments inordinately short?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_short_segments&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have segments which seem very short:</p>
+<pre><code>* dollar (U+0024) contains a short segment L&lt;&lt;571.0,614.0&gt;--&lt;530.0,622.0&gt;&gt;
+
+* ampersand (U+0026) contains a short segment L&lt;&lt;377.0,795.0&gt;--&lt;377.0,795.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1272.0,431.0&gt;-&lt;1269.0,416.0&gt;-&lt;1269.0,409.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1269.0,409.0&gt;-&lt;1269.0,390.0&gt;-&lt;1298.0,390.0&gt;&gt;
+
+* ae (U+00E6) contains a short segment L&lt;&lt;778.0,661.0&gt;--&lt;778.0,697.0&gt;&gt;
+
+* aeacute (U+01FD) contains a short segment L&lt;&lt;778.0,661.0&gt;--&lt;778.0,697.0&gt;&gt;
+
+* uni0E3F (U+0E3F) contains a short segment L&lt;&lt;687.0,1382.0&gt;--&lt;716.0,1382.0&gt;&gt;
+
+* uni0E3F (U+0E3F) contains a short segment L&lt;&lt;687.0,286.0&gt;--&lt;691.0,286.0&gt;&gt;
+
+* Euro (U+20AC) contains a short segment B&lt;&lt;470.0,720.0&gt;-&lt;470.0,696.0&gt;-&lt;471.0,673.0&gt;&gt;
+
+* uni20BA (U+20BA) contains a short segment L&lt;&lt;643.0,701.0&gt;--&lt;647.0,692.0&gt;&gt; 
+
+* And radical (U+221A) contains a short segment B&lt;&lt;220.5,301.5&gt;-&lt;211.0,313.0&gt;-&lt;189.0,313.0&gt;&gt; [code: found-short-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-MediumItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have segments which seem very short:</p>
+<pre><code>* dollar (U+0024) contains a short segment L&lt;&lt;552.0,676.0&gt;--&lt;516.0,688.0&gt;&gt;
+
+* dollar (U+0024) contains a short segment B&lt;&lt;692.0,1405.0&gt;-&lt;699.0,1405.0&gt;-&lt;705.0,1404.0&gt;&gt;
+
+* dollar (U+0024) contains a short segment B&lt;&lt;552.0,34.0&gt;-&lt;541.0,34.0&gt;-&lt;529.0,35.0&gt;&gt;
+
+* ampersand (U+0026) contains a short segment L&lt;&lt;604.0,858.0&gt;--&lt;610.0,860.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1250.0,372.0&gt;-&lt;1247.0,357.0&gt;-&lt;1247.0,353.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1247.0,353.0&gt;-&lt;1247.0,331.0&gt;-&lt;1277.0,331.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1377.0,331.0&gt;-&lt;1395.0,331.0&gt;-&lt;1431.5,338.0&gt;&gt;
+
+* g (U+0067) contains a short segment B&lt;&lt;979.0,1065.0&gt;-&lt;957.0,1065.0&gt;-&lt;945.5,1054.5&gt;&gt;
+
+* cent (U+00A2) contains a short segment B&lt;&lt;510.0,220.0&gt;-&lt;506.0,220.0&gt;-&lt;503.0,220.0&gt;&gt;
+
+* ordfeminine (U+00AA) contains a short segment L&lt;&lt;686.0,1135.0&gt;--&lt;688.0,1146.0&gt;&gt;
+
+* uni00B5 (U+00B5) contains a short segment B&lt;&lt;935.5,172.5&gt;-&lt;942.0,161.0&gt;-&lt;973.0,161.0&gt;&gt;
+
+* ae (U+00E6) contains a short segment L&lt;&lt;805.0,654.0&gt;--&lt;814.0,696.0&gt;&gt;
+
+* gcircumflex (U+011D) contains a short segment B&lt;&lt;979.0,1065.0&gt;-&lt;957.0,1065.0&gt;-&lt;945.5,1054.5&gt;&gt;
+
+* gbreve (U+011F) contains a short segment B&lt;&lt;979.0,1065.0&gt;-&lt;957.0,1065.0&gt;-&lt;945.5,1054.5&gt;&gt;
+
+* gdotaccent (U+0121) contains a short segment B&lt;&lt;979.0,1065.0&gt;-&lt;957.0,1065.0&gt;-&lt;945.5,1054.5&gt;&gt;
+
+* uni0123 (U+0123) contains a short segment B&lt;&lt;979.0,1065.0&gt;-&lt;957.0,1065.0&gt;-&lt;945.5,1054.5&gt;&gt;
+
+* gcaron (U+01E7) contains a short segment B&lt;&lt;979.0,1065.0&gt;-&lt;957.0,1065.0&gt;-&lt;945.5,1054.5&gt;&gt;
+
+* aeacute (U+01FD) contains a short segment L&lt;&lt;805.0,654.0&gt;--&lt;814.0,696.0&gt;&gt;
+
+* uni03BC (U+03BC) contains a short segment B&lt;&lt;935.5,172.5&gt;-&lt;942.0,161.0&gt;-&lt;973.0,161.0&gt;&gt;
+
+* uni0E3F (U+0E3F) contains a short segment L&lt;&lt;773.0,1382.0&gt;--&lt;789.0,1382.0&gt;&gt;
+
+* uni0E3F (U+0E3F) contains a short segment L&lt;&lt;662.0,853.0&gt;--&lt;664.0,853.0&gt;&gt;
+
+* uni20BA (U+20BA) contains a short segment L&lt;&lt;586.0,717.0&gt;--&lt;593.0,687.0&gt;&gt;
+
+* uni20BA (U+20BA) contains a short segment B&lt;&lt;593.0,687.0&gt;-&lt;598.0,665.0&gt;-&lt;600.5,638.5&gt;&gt;
+
+* radical (U+221A) contains a short segment B&lt;&lt;226.0,284.0&gt;-&lt;223.0,310.0&gt;-&lt;215.0,322.0&gt;&gt; 
+
+* And radical (U+221A) contains a short segment B&lt;&lt;215.0,322.0&gt;-&lt;207.0,334.0&gt;-&lt;185.0,334.0&gt;&gt; [code: found-short-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have segments which seem very short:</p>
+<pre><code>* dollar (U+0024) contains a short segment L&lt;&lt;555.0,641.0&gt;--&lt;520.0,648.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1246.0,400.0&gt;-&lt;1243.0,385.0&gt;-&lt;1243.0,378.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1243.0,378.0&gt;-&lt;1243.0,359.0&gt;-&lt;1273.0,359.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1368.0,359.0&gt;-&lt;1392.0,359.0&gt;-&lt;1427.0,367.0&gt;&gt;
+
+* ae (U+00E6) contains a short segment L&lt;&lt;790.0,657.0&gt;--&lt;790.0,696.0&gt;&gt;
+
+* aeacute (U+01FD) contains a short segment L&lt;&lt;790.0,657.0&gt;--&lt;790.0,696.0&gt;&gt;
+
+* uni0E3F (U+0E3F) contains a short segment L&lt;&lt;668.0,1382.0&gt;--&lt;690.0,1382.0&gt;&gt;
+
+* uni0E3F (U+0E3F) contains a short segment L&lt;&lt;668.0,860.0&gt;--&lt;673.0,860.0&gt;&gt;
+
+* Euro (U+20AC) contains a short segment B&lt;&lt;430.0,721.0&gt;-&lt;430.0,696.0&gt;-&lt;431.0,671.0&gt;&gt;
+
+* uni20BA (U+20BA) contains a short segment L&lt;&lt;609.0,709.0&gt;--&lt;619.0,689.0&gt;&gt; 
+
+* And radical (U+221A) contains a short segment B&lt;&lt;247.0,312.0&gt;-&lt;237.0,324.0&gt;-&lt;215.0,324.0&gt;&gt; [code: found-short-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have segments which seem very short:</p>
+<pre><code>* dollar (U+0024) contains a short segment B&lt;&lt;711.0,886.0&gt;-&lt;724.0,883.0&gt;-&lt;740.0,881.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1323.0,494.0&gt;-&lt;1320.0,479.0&gt;-&lt;1320.0,472.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1320.0,472.0&gt;-&lt;1320.0,454.0&gt;-&lt;1349.0,454.0&gt;&gt;
+
+* a (U+0061) contains a short segment L&lt;&lt;755.0,669.0&gt;--&lt;755.0,699.0&gt;&gt;
+
+* y (U+0079) contains a short segment B&lt;&lt;433.0,-110.0&gt;-&lt;457.0,-110.0&gt;-&lt;468.0,-103.0&gt;&gt;
+
+* y (U+0079) contains a short segment B&lt;&lt;468.0,-103.0&gt;-&lt;479.0,-96.0&gt;-&lt;488.0,-74.0&gt;&gt;
+
+* sterling (U+00A3) contains a short segment L&lt;&lt;244.0,763.0&gt;--&lt;243.0,765.0&gt;&gt;
+
+* ordfeminine (U+00AA) contains a short segment L&lt;&lt;557.0,1141.0&gt;--&lt;557.0,1160.0&gt;&gt;
+
+* agrave (U+00E0) contains a short segment L&lt;&lt;755.0,669.0&gt;--&lt;755.0,699.0&gt;&gt;
+
+* aacute (U+00E1) contains a short segment L&lt;&lt;755.0,669.0&gt;--&lt;755.0,699.0&gt;&gt;
+
+* acircumflex (U+00E2) contains a short segment L&lt;&lt;755.0,669.0&gt;--&lt;755.0,699.0&gt;&gt;
+
+* atilde (U+00E3) contains a short segment L&lt;&lt;755.0,669.0&gt;--&lt;755.0,699.0&gt;&gt;
+
+* adieresis (U+00E4) contains a short segment L&lt;&lt;755.0,669.0&gt;--&lt;755.0,699.0&gt;&gt;
+
+* aring (U+00E5) contains a short segment L&lt;&lt;755.0,669.0&gt;--&lt;755.0,699.0&gt;&gt;
+
+* ae (U+00E6) contains a short segment L&lt;&lt;754.0,670.0&gt;--&lt;754.0,699.0&gt;&gt;
+
+* yacute (U+00FD) contains a short segment B&lt;&lt;433.0,-110.0&gt;-&lt;457.0,-110.0&gt;-&lt;468.0,-103.0&gt;&gt;
+
+* yacute (U+00FD) contains a short segment B&lt;&lt;468.0,-103.0&gt;-&lt;479.0,-96.0&gt;-&lt;488.0,-74.0&gt;&gt;
+
+* ydieresis (U+00FF) contains a short segment B&lt;&lt;433.0,-110.0&gt;-&lt;457.0,-110.0&gt;-&lt;468.0,-103.0&gt;&gt;
+
+* ydieresis (U+00FF) contains a short segment B&lt;&lt;468.0,-103.0&gt;-&lt;479.0,-96.0&gt;-&lt;488.0,-74.0&gt;&gt;
+
+* amacron (U+0101) contains a short segment L&lt;&lt;755.0,669.0&gt;--&lt;755.0,699.0&gt;&gt;
+
+* abreve (U+0103) contains a short segment L&lt;&lt;755.0,669.0&gt;--&lt;755.0,699.0&gt;&gt;
+
+* aogonek (U+0105) contains a short segment L&lt;&lt;755.0,669.0&gt;--&lt;755.0,699.0&gt;&gt;
+
+* ycircumflex (U+0177) contains a short segment B&lt;&lt;433.0,-110.0&gt;-&lt;457.0,-110.0&gt;-&lt;468.0,-103.0&gt;&gt;
+
+* ycircumflex (U+0177) contains a short segment B&lt;&lt;468.0,-103.0&gt;-&lt;479.0,-96.0&gt;-&lt;488.0,-74.0&gt;&gt;
+
+* uni01CE (U+01CE) contains a short segment L&lt;&lt;755.0,669.0&gt;--&lt;755.0,699.0&gt;&gt;
+
+* aringacute (U+01FB) contains a short segment L&lt;&lt;755.0,669.0&gt;--&lt;755.0,699.0&gt;&gt;
+
+* aeacute (U+01FD) contains a short segment L&lt;&lt;754.0,670.0&gt;--&lt;754.0,699.0&gt;&gt;
+
+* uni0233 (U+0233) contains a short segment B&lt;&lt;433.0,-110.0&gt;-&lt;457.0,-110.0&gt;-&lt;468.0,-103.0&gt;&gt;
+
+* uni0233 (U+0233) contains a short segment B&lt;&lt;468.0,-103.0&gt;-&lt;479.0,-96.0&gt;-&lt;488.0,-74.0&gt;&gt;
+
+* uni1EA1 (U+1EA1) contains a short segment L&lt;&lt;755.0,669.0&gt;--&lt;755.0,699.0&gt;&gt;
+
+* ygrave (U+1EF3) contains a short segment B&lt;&lt;433.0,-110.0&gt;-&lt;457.0,-110.0&gt;-&lt;468.0,-103.0&gt;&gt;
+
+* ygrave (U+1EF3) contains a short segment B&lt;&lt;468.0,-103.0&gt;-&lt;479.0,-96.0&gt;-&lt;488.0,-74.0&gt;&gt;
+
+* uni1EF9 (U+1EF9) contains a short segment B&lt;&lt;433.0,-110.0&gt;-&lt;457.0,-110.0&gt;-&lt;468.0,-103.0&gt;&gt;
+
+* uni1EF9 (U+1EF9) contains a short segment B&lt;&lt;468.0,-103.0&gt;-&lt;479.0,-96.0&gt;-&lt;488.0,-74.0&gt;&gt;
+
+* uni2075 (U+2075) contains a short segment B&lt;&lt;429.0,1113.0&gt;-&lt;420.0,1113.0&gt;-&lt;403.5,1109.0&gt;&gt;
+
+* uni20A9 (U+20A9) contains a short segment L&lt;&lt;179.0,686.0&gt;--&lt;167.0,746.0&gt;&gt;
+
+* uni20A9 (U+20A9) contains a short segment L&lt;&lt;1708.0,746.0&gt;--&lt;1696.0,686.0&gt;&gt;
+
+* Euro (U+20AC) contains a short segment B&lt;&lt;161.0,676.0&gt;-&lt;160.0,698.0&gt;-&lt;160.0,721.0&gt;&gt;
+
+* Euro (U+20AC) contains a short segment B&lt;&lt;552.0,720.0&gt;-&lt;552.0,697.0&gt;-&lt;553.0,676.0&gt;&gt;
+
+* uni216F (U+216F) contains a short segment L&lt;&lt;1647.0,316.0&gt;--&lt;1734.0,316.0&gt;&gt;
+
+* uni216F (U+216F) contains a short segment L&lt;&lt;712.0,316.0&gt;--&lt;799.0,316.0&gt;&gt;
+
+* radical (U+221A) contains a short segment B&lt;&lt;165.5,279.0&gt;-&lt;157.0,290.0&gt;-&lt;135.0,290.0&gt;&gt;
+
+* radical (U+221A) contains a short segment B&lt;&lt;1294.0,1160.0&gt;-&lt;1272.0,1160.0&gt;-&lt;1262.5,1148.5&gt;&gt; 
+
+* And uni2464 (U+2464) contains a short segment B&lt;&lt;969.0,695.0&gt;-&lt;960.0,695.0&gt;-&lt;943.5,691.0&gt;&gt; [code: found-short-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have segments which seem very short:</p>
+<pre><code>* dollar (U+0024) contains a short segment L&lt;&lt;541.0,664.0&gt;--&lt;512.0,671.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1224.0,372.0&gt;-&lt;1221.0,357.0&gt;-&lt;1221.0,351.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1221.0,351.0&gt;-&lt;1221.0,331.0&gt;-&lt;1251.0,331.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1350.0,331.0&gt;-&lt;1369.0,331.0&gt;-&lt;1405.5,338.0&gt;&gt;
+
+* ae (U+00E6) contains a short segment L&lt;&lt;801.0,653.0&gt;--&lt;801.0,696.0&gt;&gt;
+
+* aeacute (U+01FD) contains a short segment L&lt;&lt;801.0,653.0&gt;--&lt;801.0,696.0&gt;&gt;
+
+* uni0E3F (U+0E3F) contains a short segment L&lt;&lt;651.0,1382.0&gt;--&lt;667.0,1382.0&gt;&gt;
+
+* uni0E3F (U+0E3F) contains a short segment L&lt;&lt;651.0,852.0&gt;--&lt;654.0,852.0&gt;&gt;
+
+* Euro (U+20AC) contains a short segment B&lt;&lt;394.0,721.0&gt;-&lt;394.0,695.0&gt;-&lt;395.0,670.0&gt;&gt;
+
+* uni20BA (U+20BA) contains a short segment L&lt;&lt;580.0,717.0&gt;--&lt;593.0,687.0&gt;&gt;
+
+* uni20BA (U+20BA) contains a short segment B&lt;&lt;593.0,687.0&gt;-&lt;603.0,665.0&gt;-&lt;611.0,638.5&gt;&gt; 
+
+* And radical (U+221A) contains a short segment B&lt;&lt;271.5,322.0&gt;-&lt;261.0,334.0&gt;-&lt;238.0,334.0&gt;&gt; [code: found-short-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BlackItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have segments which seem very short:</p>
+<pre><code>* dollar (U+0024) contains a short segment B&lt;&lt;706.0,1408.0&gt;-&lt;723.0,1408.0&gt;-&lt;741.0,1407.0&gt;&gt;
+
+* dollar (U+0024) contains a short segment B&lt;&lt;733.0,878.0&gt;-&lt;743.0,876.0&gt;-&lt;749.0,874.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1353.0,494.0&gt;-&lt;1350.0,479.0&gt;-&lt;1350.0,474.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1350.0,474.0&gt;-&lt;1350.0,454.0&gt;-&lt;1379.0,454.0&gt;&gt;
+
+* e (U+0065) contains a short segment B&lt;&lt;441.0,465.0&gt;-&lt;440.0,451.0&gt;-&lt;440.0,438.0&gt;&gt;
+
+* f (U+0066) contains a short segment B&lt;&lt;-21.0,-110.0&gt;-&lt;1.0,-110.0&gt;-&lt;10.0,-98.5&gt;&gt;
+
+* f (U+0066) contains a short segment B&lt;&lt;712.0,1220.0&gt;-&lt;690.0,1220.0&gt;-&lt;681.0,1209.0&gt;&gt;
+
+* g (U+0067) contains a short segment B&lt;&lt;386.0,322.5&gt;-&lt;372.0,312.0&gt;-&lt;372.0,295.0&gt;&gt;
+
+* g (U+0067) contains a short segment B&lt;&lt;372.0,295.0&gt;-&lt;372.0,279.0&gt;-&lt;388.5,271.5&gt;&gt;
+
+* y (U+0079) contains a short segment B&lt;&lt;254.0,-110.0&gt;-&lt;277.0,-110.0&gt;-&lt;289.0,-103.0&gt;&gt;
+
+* cent (U+00A2) contains a short segment B&lt;&lt;655.0,1242.0&gt;-&lt;664.0,1242.0&gt;-&lt;673.0,1242.0&gt;&gt;
+
+* sterling (U+00A3) contains a short segment L&lt;&lt;286.0,763.0&gt;--&lt;285.0,765.0&gt;&gt;
+
+* yen (U+00A5) contains a short segment L&lt;&lt;427.0,521.0&gt;--&lt;427.0,523.0&gt;&gt;
+
+* ordfeminine (U+00AA) contains a short segment L&lt;&lt;637.0,1130.0&gt;--&lt;640.0,1145.0&gt;&gt;
+
+* uni00B5 (U+00B5) contains a short segment B&lt;&lt;1123.0,291.5&gt;-&lt;1129.0,280.0&gt;-&lt;1160.0,280.0&gt;&gt;
+
+* ae (U+00E6) contains a short segment L&lt;&lt;758.0,677.0&gt;--&lt;763.0,699.0&gt;&gt;
+
+* egrave (U+00E8) contains a short segment B&lt;&lt;441.0,465.0&gt;-&lt;440.0,451.0&gt;-&lt;440.0,438.0&gt;&gt;
+
+* eacute (U+00E9) contains a short segment B&lt;&lt;441.0,465.0&gt;-&lt;440.0,451.0&gt;-&lt;440.0,438.0&gt;&gt;
+
+* ecircumflex (U+00EA) contains a short segment B&lt;&lt;441.0,465.0&gt;-&lt;440.0,451.0&gt;-&lt;440.0,438.0&gt;&gt;
+
+* edieresis (U+00EB) contains a short segment B&lt;&lt;441.0,465.0&gt;-&lt;440.0,451.0&gt;-&lt;440.0,438.0&gt;&gt;
+
+* yacute (U+00FD) contains a short segment B&lt;&lt;254.0,-110.0&gt;-&lt;277.0,-110.0&gt;-&lt;289.0,-103.0&gt;&gt;
+
+* ydieresis (U+00FF) contains a short segment B&lt;&lt;254.0,-110.0&gt;-&lt;277.0,-110.0&gt;-&lt;289.0,-103.0&gt;&gt;
+
+* emacron (U+0113) contains a short segment B&lt;&lt;441.0,465.0&gt;-&lt;440.0,451.0&gt;-&lt;440.0,438.0&gt;&gt;
+
+* ebreve (U+0115) contains a short segment B&lt;&lt;441.0,465.0&gt;-&lt;440.0,451.0&gt;-&lt;440.0,438.0&gt;&gt;
+
+* edotaccent (U+0117) contains a short segment B&lt;&lt;441.0,465.0&gt;-&lt;440.0,451.0&gt;-&lt;440.0,438.0&gt;&gt;
+
+* eogonek (U+0119) contains a short segment B&lt;&lt;441.0,465.0&gt;-&lt;440.0,451.0&gt;-&lt;440.0,438.0&gt;&gt;
+
+* ecaron (U+011B) contains a short segment B&lt;&lt;441.0,465.0&gt;-&lt;440.0,451.0&gt;-&lt;440.0,438.0&gt;&gt;
+
+* gcircumflex (U+011D) contains a short segment B&lt;&lt;386.0,322.5&gt;-&lt;372.0,312.0&gt;-&lt;372.0,295.0&gt;&gt;
+
+* gcircumflex (U+011D) contains a short segment B&lt;&lt;372.0,295.0&gt;-&lt;372.0,279.0&gt;-&lt;388.5,271.5&gt;&gt;
+
+* gbreve (U+011F) contains a short segment B&lt;&lt;386.0,322.5&gt;-&lt;372.0,312.0&gt;-&lt;372.0,295.0&gt;&gt;
+
+* gbreve (U+011F) contains a short segment B&lt;&lt;372.0,295.0&gt;-&lt;372.0,279.0&gt;-&lt;388.5,271.5&gt;&gt;
+
+* gdotaccent (U+0121) contains a short segment B&lt;&lt;386.0,322.5&gt;-&lt;372.0,312.0&gt;-&lt;372.0,295.0&gt;&gt;
+
+* gdotaccent (U+0121) contains a short segment B&lt;&lt;372.0,295.0&gt;-&lt;372.0,279.0&gt;-&lt;388.5,271.5&gt;&gt;
+
+* uni0123 (U+0123) contains a short segment B&lt;&lt;386.0,322.5&gt;-&lt;372.0,312.0&gt;-&lt;372.0,295.0&gt;&gt;
+
+* uni0123 (U+0123) contains a short segment B&lt;&lt;372.0,295.0&gt;-&lt;372.0,279.0&gt;-&lt;388.5,271.5&gt;&gt;
+
+* ycircumflex (U+0177) contains a short segment B&lt;&lt;254.0,-110.0&gt;-&lt;277.0,-110.0&gt;-&lt;289.0,-103.0&gt;&gt;
+
+* uni018F (U+018F) contains a short segment B&lt;&lt;1081.0,824.0&gt;-&lt;1082.0,844.0&gt;-&lt;1082.0,862.0&gt;&gt;
+
+* gcaron (U+01E7) contains a short segment B&lt;&lt;386.0,322.5&gt;-&lt;372.0,312.0&gt;-&lt;372.0,295.0&gt;&gt;
+
+* gcaron (U+01E7) contains a short segment B&lt;&lt;372.0,295.0&gt;-&lt;372.0,279.0&gt;-&lt;388.5,271.5&gt;&gt;
+
+* aeacute (U+01FD) contains a short segment L&lt;&lt;758.0,677.0&gt;--&lt;763.0,699.0&gt;&gt;
+
+* uni0233 (U+0233) contains a short segment B&lt;&lt;254.0,-110.0&gt;-&lt;277.0,-110.0&gt;-&lt;289.0,-103.0&gt;&gt;
+
+* uni0259 (U+0259) contains a short segment B&lt;&lt;777.0,615.0&gt;-&lt;778.0,629.0&gt;-&lt;778.0,642.0&gt;&gt;
+
+* uni03BC (U+03BC) contains a short segment B&lt;&lt;1123.0,291.5&gt;-&lt;1129.0,280.0&gt;-&lt;1160.0,280.0&gt;&gt;
+
+* pi (U+03C0) contains a short segment B&lt;&lt;1128.5,291.0&gt;-&lt;1135.0,280.0&gt;-&lt;1165.0,280.0&gt;&gt;
+
+* uni1EB9 (U+1EB9) contains a short segment B&lt;&lt;441.0,465.0&gt;-&lt;440.0,451.0&gt;-&lt;440.0,438.0&gt;&gt;
+
+* uni1EBD (U+1EBD) contains a short segment B&lt;&lt;441.0,465.0&gt;-&lt;440.0,451.0&gt;-&lt;440.0,438.0&gt;&gt;
+
+* ygrave (U+1EF3) contains a short segment B&lt;&lt;254.0,-110.0&gt;-&lt;277.0,-110.0&gt;-&lt;289.0,-103.0&gt;&gt;
+
+* uni1EF9 (U+1EF9) contains a short segment B&lt;&lt;254.0,-110.0&gt;-&lt;277.0,-110.0&gt;-&lt;289.0,-103.0&gt;&gt;
+
+* Euro (U+20AC) contains a short segment B&lt;&lt;532.0,566.0&gt;-&lt;532.0,562.0&gt;-&lt;532.0,558.0&gt;&gt;
+
+* radical (U+221A) contains a short segment B&lt;&lt;109.0,239.0&gt;-&lt;108.0,268.0&gt;-&lt;102.0,279.0&gt;&gt;
+
+* radical (U+221A) contains a short segment B&lt;&lt;102.0,279.0&gt;-&lt;96.0,290.0&gt;-&lt;74.0,290.0&gt;&gt;
+
+* fi (U+FB01) contains a short segment B&lt;&lt;-21.0,-110.0&gt;-&lt;1.0,-110.0&gt;-&lt;10.0,-98.5&gt;&gt;
+
+* fi (U+FB01) contains a short segment B&lt;&lt;712.0,1220.0&gt;-&lt;690.0,1220.0&gt;-&lt;681.0,1209.0&gt;&gt;
+
+* fl (U+FB02) contains a short segment B&lt;&lt;-21.0,-110.0&gt;-&lt;1.0,-110.0&gt;-&lt;10.0,-98.5&gt;&gt; 
+
+* And fl (U+FB02) contains a short segment B&lt;&lt;712.0,1220.0&gt;-&lt;690.0,1220.0&gt;-&lt;681.0,1209.0&gt;&gt; [code: found-short-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have segments which seem very short:</p>
+<pre><code>* dollar (U+0024) contains a short segment B&lt;&lt;696.0,1405.0&gt;-&lt;705.0,1405.0&gt;-&lt;713.0,1405.0&gt;&gt;
+
+* dollar (U+0024) contains a short segment B&lt;&lt;564.0,34.0&gt;-&lt;549.0,34.0&gt;-&lt;535.0,34.0&gt;&gt;
+
+* ampersand (U+0026) contains a short segment L&lt;&lt;423.0,778.0&gt;--&lt;417.0,786.0&gt;&gt;
+
+* ampersand (U+0026) contains a short segment L&lt;&lt;619.0,868.0&gt;--&lt;620.0,868.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1274.0,400.0&gt;-&lt;1271.0,385.0&gt;-&lt;1271.0,380.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1271.0,380.0&gt;-&lt;1271.0,359.0&gt;-&lt;1300.0,359.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1396.0,359.0&gt;-&lt;1420.0,359.0&gt;-&lt;1454.5,367.0&gt;&gt;
+
+* g (U+0067) contains a short segment B&lt;&lt;987.0,1049.0&gt;-&lt;966.0,1049.0&gt;-&lt;955.0,1038.5&gt;&gt;
+
+* cent (U+00A2) contains a short segment B&lt;&lt;520.0,214.0&gt;-&lt;518.0,214.0&gt;-&lt;515.0,214.0&gt;&gt;
+
+* ordfeminine (U+00AA) contains a short segment L&lt;&lt;675.0,1134.0&gt;--&lt;677.0,1146.0&gt;&gt;
+
+* uni00B5 (U+00B5) contains a short segment B&lt;&lt;978.5,199.5&gt;-&lt;985.0,188.0&gt;-&lt;1015.0,188.0&gt;&gt;
+
+* ae (U+00E6) contains a short segment L&lt;&lt;794.0,659.0&gt;--&lt;802.0,696.0&gt;&gt;
+
+* gcircumflex (U+011D) contains a short segment B&lt;&lt;987.0,1049.0&gt;-&lt;966.0,1049.0&gt;-&lt;955.0,1038.5&gt;&gt;
+
+* gbreve (U+011F) contains a short segment B&lt;&lt;987.0,1049.0&gt;-&lt;966.0,1049.0&gt;-&lt;955.0,1038.5&gt;&gt;
+
+* gdotaccent (U+0121) contains a short segment B&lt;&lt;987.0,1049.0&gt;-&lt;966.0,1049.0&gt;-&lt;955.0,1038.5&gt;&gt;
+
+* uni0123 (U+0123) contains a short segment B&lt;&lt;987.0,1049.0&gt;-&lt;966.0,1049.0&gt;-&lt;955.0,1038.5&gt;&gt;
+
+* gcaron (U+01E7) contains a short segment B&lt;&lt;987.0,1049.0&gt;-&lt;966.0,1049.0&gt;-&lt;955.0,1038.5&gt;&gt;
+
+* aeacute (U+01FD) contains a short segment L&lt;&lt;794.0,659.0&gt;--&lt;802.0,696.0&gt;&gt;
+
+* uni03BC (U+03BC) contains a short segment B&lt;&lt;978.5,199.5&gt;-&lt;985.0,188.0&gt;-&lt;1015.0,188.0&gt;&gt;
+
+* uni0E3F (U+0E3F) contains a short segment L&lt;&lt;794.0,1382.0&gt;--&lt;817.0,1382.0&gt;&gt;
+
+* uni0E3F (U+0E3F) contains a short segment L&lt;&lt;685.0,861.0&gt;--&lt;689.0,861.0&gt;&gt;
+
+* uni20BA (U+20BA) contains a short segment L&lt;&lt;616.0,709.0&gt;--&lt;621.0,689.0&gt;&gt;
+
+* uni20BF (U+20BF) contains a short segment L&lt;&lt;760.0,1382.0&gt;--&lt;762.0,1382.0&gt;&gt;
+
+* radical (U+221A) contains a short segment B&lt;&lt;200.0,274.0&gt;-&lt;197.0,300.0&gt;-&lt;189.5,312.0&gt;&gt; 
+
+* And radical (U+221A) contains a short segment B&lt;&lt;189.5,312.0&gt;-&lt;182.0,324.0&gt;-&lt;160.0,324.0&gt;&gt; [code: found-short-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have segments which seem very short:</p>
+<pre><code>* dollar (U+0024) contains a short segment B&lt;&lt;699.0,1406.0&gt;-&lt;711.0,1406.0&gt;-&lt;722.0,1406.0&gt;&gt;
+
+* dollar (U+0024) contains a short segment B&lt;&lt;577.0,33.0&gt;-&lt;559.0,33.0&gt;-&lt;542.0,33.0&gt;&gt;
+
+* ampersand (U+0026) contains a short segment L&lt;&lt;414.0,775.0&gt;--&lt;399.0,796.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1300.0,431.0&gt;-&lt;1297.0,416.0&gt;-&lt;1297.0,411.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1297.0,411.0&gt;-&lt;1297.0,390.0&gt;-&lt;1326.0,390.0&gt;&gt;
+
+* g (U+0067) contains a short segment B&lt;&lt;996.0,1032.0&gt;-&lt;976.0,1032.0&gt;-&lt;965.0,1021.0&gt;&gt;
+
+* ordfeminine (U+00AA) contains a short segment L&lt;&lt;663.0,1133.0&gt;--&lt;665.0,1145.0&gt;&gt;
+
+* uni00B5 (U+00B5) contains a short segment B&lt;&lt;1026.0,229.5&gt;-&lt;1032.0,218.0&gt;-&lt;1063.0,218.0&gt;&gt;
+
+* ae (U+00E6) contains a short segment L&lt;&lt;782.0,665.0&gt;--&lt;789.0,697.0&gt;&gt;
+
+* gcircumflex (U+011D) contains a short segment B&lt;&lt;996.0,1032.0&gt;-&lt;976.0,1032.0&gt;-&lt;965.0,1021.0&gt;&gt;
+
+* gbreve (U+011F) contains a short segment B&lt;&lt;996.0,1032.0&gt;-&lt;976.0,1032.0&gt;-&lt;965.0,1021.0&gt;&gt;
+
+* gdotaccent (U+0121) contains a short segment B&lt;&lt;996.0,1032.0&gt;-&lt;976.0,1032.0&gt;-&lt;965.0,1021.0&gt;&gt;
+
+* uni0123 (U+0123) contains a short segment B&lt;&lt;996.0,1032.0&gt;-&lt;976.0,1032.0&gt;-&lt;965.0,1021.0&gt;&gt;
+
+* gcaron (U+01E7) contains a short segment B&lt;&lt;996.0,1032.0&gt;-&lt;976.0,1032.0&gt;-&lt;965.0,1021.0&gt;&gt;
+
+* aeacute (U+01FD) contains a short segment L&lt;&lt;782.0,665.0&gt;--&lt;789.0,697.0&gt;&gt;
+
+* uni03BC (U+03BC) contains a short segment B&lt;&lt;1026.0,229.5&gt;-&lt;1032.0,218.0&gt;-&lt;1063.0,218.0&gt;&gt;
+
+* uni0E3F (U+0E3F) contains a short segment L&lt;&lt;818.0,1382.0&gt;--&lt;848.0,1382.0&gt;&gt;
+
+* uni0E3F (U+0E3F) contains a short segment L&lt;&lt;590.0,287.0&gt;--&lt;592.0,287.0&gt;&gt;
+
+* uni20BA (U+20BA) contains a short segment L&lt;&lt;651.0,701.0&gt;--&lt;653.0,692.0&gt;&gt;
+
+* uni20BF (U+20BF) contains a short segment B&lt;&lt;770.0,1382.0&gt;-&lt;778.0,1382.0&gt;-&lt;786.0,1382.0&gt;&gt;
+
+* radical (U+221A) contains a short segment B&lt;&lt;170.0,262.0&gt;-&lt;168.0,290.0&gt;-&lt;161.0,301.5&gt;&gt; 
+
+* And radical (U+221A) contains a short segment B&lt;&lt;161.0,301.5&gt;-&lt;154.0,313.0&gt;-&lt;132.0,313.0&gt;&gt; [code: found-short-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have segments which seem very short:</p>
+<pre><code>* dollar (U+0024) contains a short segment B&lt;&lt;703.0,1407.0&gt;-&lt;717.0,1407.0&gt;-&lt;732.0,1407.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1327.0,463.0&gt;-&lt;1324.0,448.0&gt;-&lt;1324.0,443.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1324.0,443.0&gt;-&lt;1324.0,423.0&gt;-&lt;1353.0,423.0&gt;&gt;
+
+* f (U+0066) contains a short segment B&lt;&lt;-17.0,-139.0&gt;-&lt;5.0,-139.0&gt;-&lt;14.5,-128.0&gt;&gt;
+
+* f (U+0066) contains a short segment B&lt;&lt;685.0,1249.0&gt;-&lt;663.0,1249.0&gt;-&lt;653.5,1238.0&gt;&gt;
+
+* g (U+0067) contains a short segment B&lt;&lt;350.0,291.0&gt;-&lt;350.0,273.0&gt;-&lt;367.5,263.5&gt;&gt;
+
+* y (U+0079) contains a short segment B&lt;&lt;233.0,-138.0&gt;-&lt;256.0,-138.0&gt;-&lt;269.0,-130.5&gt;&gt;
+
+* cent (U+00A2) contains a short segment B&lt;&lt;646.0,1246.0&gt;-&lt;652.0,1246.0&gt;-&lt;657.0,1246.0&gt;&gt;
+
+* ordfeminine (U+00AA) contains a short segment L&lt;&lt;649.0,1131.0&gt;--&lt;652.0,1145.0&gt;&gt;
+
+* uni00B5 (U+00B5) contains a short segment B&lt;&lt;1076.0,261.5&gt;-&lt;1082.0,250.0&gt;-&lt;1113.0,250.0&gt;&gt;
+
+* ae (U+00E6) contains a short segment L&lt;&lt;770.0,671.0&gt;--&lt;776.0,698.0&gt;&gt;
+
+* yacute (U+00FD) contains a short segment B&lt;&lt;233.0,-138.0&gt;-&lt;256.0,-138.0&gt;-&lt;269.0,-130.5&gt;&gt;
+
+* ydieresis (U+00FF) contains a short segment B&lt;&lt;233.0,-138.0&gt;-&lt;256.0,-138.0&gt;-&lt;269.0,-130.5&gt;&gt;
+
+* gcircumflex (U+011D) contains a short segment B&lt;&lt;350.0,291.0&gt;-&lt;350.0,273.0&gt;-&lt;367.5,263.5&gt;&gt;
+
+* gbreve (U+011F) contains a short segment B&lt;&lt;350.0,291.0&gt;-&lt;350.0,273.0&gt;-&lt;367.5,263.5&gt;&gt;
+
+* gdotaccent (U+0121) contains a short segment B&lt;&lt;350.0,291.0&gt;-&lt;350.0,273.0&gt;-&lt;367.5,263.5&gt;&gt;
+
+* uni0123 (U+0123) contains a short segment B&lt;&lt;350.0,291.0&gt;-&lt;350.0,273.0&gt;-&lt;367.5,263.5&gt;&gt;
+
+* ycircumflex (U+0177) contains a short segment B&lt;&lt;233.0,-138.0&gt;-&lt;256.0,-138.0&gt;-&lt;269.0,-130.5&gt;&gt;
+
+* gcaron (U+01E7) contains a short segment B&lt;&lt;350.0,291.0&gt;-&lt;350.0,273.0&gt;-&lt;367.5,263.5&gt;&gt;
+
+* aeacute (U+01FD) contains a short segment L&lt;&lt;770.0,671.0&gt;--&lt;776.0,698.0&gt;&gt;
+
+* uni0233 (U+0233) contains a short segment B&lt;&lt;233.0,-138.0&gt;-&lt;256.0,-138.0&gt;-&lt;269.0,-130.5&gt;&gt;
+
+* uni03BC (U+03BC) contains a short segment B&lt;&lt;1076.0,261.5&gt;-&lt;1082.0,250.0&gt;-&lt;1113.0,250.0&gt;&gt;
+
+* ygrave (U+1EF3) contains a short segment B&lt;&lt;233.0,-138.0&gt;-&lt;256.0,-138.0&gt;-&lt;269.0,-130.5&gt;&gt;
+
+* uni1EF9 (U+1EF9) contains a short segment B&lt;&lt;233.0,-138.0&gt;-&lt;256.0,-138.0&gt;-&lt;269.0,-130.5&gt;&gt;
+
+* Euro (U+20AC) contains a short segment L&lt;&lt;499.0,562.0&gt;--&lt;499.0,560.0&gt;&gt;
+
+* uni20BF (U+20BF) contains a short segment B&lt;&lt;782.0,1382.0&gt;-&lt;796.0,1382.0&gt;-&lt;810.0,1382.0&gt;&gt;
+
+* radical (U+221A) contains a short segment B&lt;&lt;139.0,250.0&gt;-&lt;137.0,278.0&gt;-&lt;130.5,289.5&gt;&gt;
+
+* radical (U+221A) contains a short segment B&lt;&lt;130.5,289.5&gt;-&lt;124.0,301.0&gt;-&lt;102.0,301.0&gt;&gt;
+
+* fi (U+FB01) contains a short segment B&lt;&lt;-17.0,-139.0&gt;-&lt;5.0,-139.0&gt;-&lt;14.5,-128.0&gt;&gt;
+
+* fi (U+FB01) contains a short segment B&lt;&lt;685.0,1249.0&gt;-&lt;663.0,1249.0&gt;-&lt;653.5,1238.0&gt;&gt;
+
+* fl (U+FB02) contains a short segment B&lt;&lt;-17.0,-139.0&gt;-&lt;5.0,-139.0&gt;-&lt;14.5,-128.0&gt;&gt; 
+
+* And fl (U+FB02) contains a short segment B&lt;&lt;685.0,1249.0&gt;-&lt;663.0,1249.0&gt;-&lt;653.5,1238.0&gt;&gt; [code: found-short-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have segments which seem very short:</p>
+<pre><code>* dollar (U+0024) contains a short segment L&lt;&lt;530.0,683.0&gt;--&lt;505.0,689.0&gt;&gt;
+
+* ampersand (U+0026) contains a short segment L&lt;&lt;1252.0,804.0&gt;--&lt;1252.0,778.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1050.0,302.0&gt;-&lt;1050.0,304.0&gt;-&lt;1050.0,304.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1206.0,350.0&gt;-&lt;1203.0,335.0&gt;-&lt;1203.0,329.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1203.0,329.0&gt;-&lt;1203.0,309.0&gt;-&lt;1233.0,309.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1336.0,309.0&gt;-&lt;1350.0,309.0&gt;-&lt;1388.0,315.5&gt;&gt;
+
+* ae (U+00E6) contains a short segment L&lt;&lt;809.0,650.0&gt;--&lt;809.0,695.0&gt;&gt;
+
+* aeacute (U+01FD) contains a short segment L&lt;&lt;809.0,650.0&gt;--&lt;809.0,695.0&gt;&gt;
+
+* uni0E3F (U+0E3F) contains a short segment L&lt;&lt;637.0,1382.0&gt;--&lt;649.0,1382.0&gt;&gt;
+
+* uni0E3F (U+0E3F) contains a short segment L&lt;&lt;637.0,845.0&gt;--&lt;640.0,845.0&gt;&gt;
+
+* Euro (U+20AC) contains a short segment B&lt;&lt;366.0,721.0&gt;-&lt;366.0,695.0&gt;-&lt;367.0,669.0&gt;&gt;
+
+* uni20BA (U+20BA) contains a short segment L&lt;&lt;556.0,723.0&gt;--&lt;573.0,685.0&gt;&gt;
+
+* uni20BA (U+20BA) contains a short segment B&lt;&lt;573.0,685.0&gt;-&lt;582.0,665.0&gt;-&lt;589.5,639.0&gt;&gt; 
+
+* And radical (U+221A) contains a short segment B&lt;&lt;290.5,330.0&gt;-&lt;280.0,342.0&gt;-&lt;257.0,342.0&gt;&gt; [code: found-short-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have segments which seem very short:</p>
+<pre><code>* ampersand (U+0026) contains a short segment L&lt;&lt;369.0,790.0&gt;--&lt;356.0,805.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1298.0,463.0&gt;-&lt;1295.0,448.0&gt;-&lt;1295.0,441.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1295.0,441.0&gt;-&lt;1295.0,423.0&gt;-&lt;1324.0,423.0&gt;&gt;
+
+* a (U+0061) contains a short segment L&lt;&lt;762.0,666.0&gt;--&lt;762.0,698.0&gt;&gt;
+
+* y (U+0079) contains a short segment B&lt;&lt;421.0,-140.0&gt;-&lt;443.0,-140.0&gt;-&lt;454.0,-132.5&gt;&gt;
+
+* ordfeminine (U+00AA) contains a short segment L&lt;&lt;561.0,1140.0&gt;--&lt;561.0,1160.0&gt;&gt;
+
+* agrave (U+00E0) contains a short segment L&lt;&lt;762.0,666.0&gt;--&lt;762.0,698.0&gt;&gt;
+
+* aacute (U+00E1) contains a short segment L&lt;&lt;762.0,666.0&gt;--&lt;762.0,698.0&gt;&gt;
+
+* acircumflex (U+00E2) contains a short segment L&lt;&lt;762.0,666.0&gt;--&lt;762.0,698.0&gt;&gt;
+
+* atilde (U+00E3) contains a short segment L&lt;&lt;762.0,666.0&gt;--&lt;762.0,698.0&gt;&gt;
+
+* adieresis (U+00E4) contains a short segment L&lt;&lt;762.0,666.0&gt;--&lt;762.0,698.0&gt;&gt;
+
+* aring (U+00E5) contains a short segment L&lt;&lt;762.0,666.0&gt;--&lt;762.0,698.0&gt;&gt;
+
+* ae (U+00E6) contains a short segment L&lt;&lt;766.0,666.0&gt;--&lt;766.0,698.0&gt;&gt;
+
+* yacute (U+00FD) contains a short segment B&lt;&lt;421.0,-140.0&gt;-&lt;443.0,-140.0&gt;-&lt;454.0,-132.5&gt;&gt;
+
+* ydieresis (U+00FF) contains a short segment B&lt;&lt;421.0,-140.0&gt;-&lt;443.0,-140.0&gt;-&lt;454.0,-132.5&gt;&gt;
+
+* amacron (U+0101) contains a short segment L&lt;&lt;762.0,666.0&gt;--&lt;762.0,698.0&gt;&gt;
+
+* abreve (U+0103) contains a short segment L&lt;&lt;762.0,666.0&gt;--&lt;762.0,698.0&gt;&gt;
+
+* aogonek (U+0105) contains a short segment L&lt;&lt;762.0,666.0&gt;--&lt;762.0,698.0&gt;&gt;
+
+* ycircumflex (U+0177) contains a short segment B&lt;&lt;421.0,-140.0&gt;-&lt;443.0,-140.0&gt;-&lt;454.0,-132.5&gt;&gt;
+
+* uni01CE (U+01CE) contains a short segment L&lt;&lt;762.0,666.0&gt;--&lt;762.0,698.0&gt;&gt;
+
+* aringacute (U+01FB) contains a short segment L&lt;&lt;762.0,666.0&gt;--&lt;762.0,698.0&gt;&gt;
+
+* aeacute (U+01FD) contains a short segment L&lt;&lt;766.0,666.0&gt;--&lt;766.0,698.0&gt;&gt;
+
+* uni0233 (U+0233) contains a short segment B&lt;&lt;421.0,-140.0&gt;-&lt;443.0,-140.0&gt;-&lt;454.0,-132.5&gt;&gt;
+
+* uni1EA1 (U+1EA1) contains a short segment L&lt;&lt;762.0,666.0&gt;--&lt;762.0,698.0&gt;&gt;
+
+* ygrave (U+1EF3) contains a short segment B&lt;&lt;421.0,-140.0&gt;-&lt;443.0,-140.0&gt;-&lt;454.0,-132.5&gt;&gt;
+
+* uni1EF9 (U+1EF9) contains a short segment B&lt;&lt;421.0,-140.0&gt;-&lt;443.0,-140.0&gt;-&lt;454.0,-132.5&gt;&gt;
+
+* Euro (U+20AC) contains a short segment B&lt;&lt;166.0,675.0&gt;-&lt;165.0,698.0&gt;-&lt;165.0,722.0&gt;&gt;
+
+* Euro (U+20AC) contains a short segment B&lt;&lt;512.0,720.0&gt;-&lt;512.0,697.0&gt;-&lt;513.0,675.0&gt;&gt; 
+
+* And radical (U+221A) contains a short segment B&lt;&lt;192.0,289.5&gt;-&lt;183.0,301.0&gt;-&lt;161.0,301.0&gt;&gt; [code: found-short-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Italic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have segments which seem very short:</p>
+<pre><code>* dollar (U+0024) contains a short segment L&lt;&lt;550.0,696.0&gt;--&lt;518.0,707.0&gt;&gt;
+
+* dollar (U+0024) contains a short segment B&lt;&lt;690.0,1404.0&gt;-&lt;695.0,1404.0&gt;-&lt;699.0,1404.0&gt;&gt;
+
+* dollar (U+0024) contains a short segment L&lt;&lt;691.0,824.0&gt;--&lt;719.0,814.0&gt;&gt;
+
+* dollar (U+0024) contains a short segment B&lt;&lt;543.0,35.0&gt;-&lt;534.0,35.0&gt;-&lt;525.0,35.0&gt;&gt;
+
+* ampersand (U+0026) contains a short segment L&lt;&lt;1297.0,804.0&gt;--&lt;1291.0,777.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1076.0,300.0&gt;-&lt;1076.0,303.0&gt;-&lt;1076.0,304.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1232.0,350.0&gt;-&lt;1229.0,335.0&gt;-&lt;1229.0,331.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1229.0,331.0&gt;-&lt;1229.0,309.0&gt;-&lt;1259.0,309.0&gt;&gt;
+
+* at (U+0040) contains a short segment B&lt;&lt;1362.0,309.0&gt;-&lt;1376.0,309.0&gt;-&lt;1414.0,315.5&gt;&gt;
+
+* g (U+0067) contains a short segment B&lt;&lt;972.0,1077.0&gt;-&lt;950.0,1077.0&gt;-&lt;938.5,1066.5&gt;&gt;
+
+* cent (U+00A2) contains a short segment B&lt;&lt;501.0,224.0&gt;-&lt;497.0,224.0&gt;-&lt;493.0,224.0&gt;&gt;
+
+* yen (U+00A5) contains a short segment L&lt;&lt;700.0,578.0&gt;--&lt;699.0,577.0&gt;&gt;
+
+* ordfeminine (U+00AA) contains a short segment L&lt;&lt;695.0,1136.0&gt;--&lt;697.0,1146.0&gt;&gt;
+
+* uni00B5 (U+00B5) contains a short segment B&lt;&lt;902.5,151.0&gt;-&lt;909.0,140.0&gt;-&lt;939.0,140.0&gt;&gt;
+
+* ae (U+00E6) contains a short segment L&lt;&lt;813.0,650.0&gt;--&lt;823.0,695.0&gt;&gt;
+
+* gcircumflex (U+011D) contains a short segment B&lt;&lt;972.0,1077.0&gt;-&lt;950.0,1077.0&gt;-&lt;938.5,1066.5&gt;&gt;
+
+* gbreve (U+011F) contains a short segment B&lt;&lt;972.0,1077.0&gt;-&lt;950.0,1077.0&gt;-&lt;938.5,1066.5&gt;&gt;
+
+* gdotaccent (U+0121) contains a short segment B&lt;&lt;972.0,1077.0&gt;-&lt;950.0,1077.0&gt;-&lt;938.5,1066.5&gt;&gt;
+
+* uni0123 (U+0123) contains a short segment B&lt;&lt;972.0,1077.0&gt;-&lt;950.0,1077.0&gt;-&lt;938.5,1066.5&gt;&gt;
+
+* gcaron (U+01E7) contains a short segment B&lt;&lt;972.0,1077.0&gt;-&lt;950.0,1077.0&gt;-&lt;938.5,1066.5&gt;&gt;
+
+* aeacute (U+01FD) contains a short segment L&lt;&lt;813.0,650.0&gt;--&lt;823.0,695.0&gt;&gt;
+
+* uni03BC (U+03BC) contains a short segment B&lt;&lt;902.5,151.0&gt;-&lt;909.0,140.0&gt;-&lt;939.0,140.0&gt;&gt;
+
+* uni0E3F (U+0E3F) contains a short segment L&lt;&lt;757.0,1382.0&gt;--&lt;767.0,1382.0&gt;&gt;
+
+* uni0E3F (U+0E3F) contains a short segment L&lt;&lt;643.0,846.0&gt;--&lt;644.0,846.0&gt;&gt;
+
+* uni20BA (U+20BA) contains a short segment L&lt;&lt;562.0,723.0&gt;--&lt;570.0,685.0&gt;&gt;
+
+* uni20BA (U+20BA) contains a short segment B&lt;&lt;570.0,685.0&gt;-&lt;574.0,665.0&gt;-&lt;576.5,639.0&gt;&gt;
+
+* uni20BA (U+20BA) contains a short segment B&lt;&lt;576.5,639.0&gt;-&lt;579.0,613.0&gt;-&lt;578.0,583.0&gt;&gt;
+
+* radical (U+221A) contains a short segment B&lt;&lt;247.0,292.0&gt;-&lt;243.0,318.0&gt;-&lt;235.5,330.0&gt;&gt; 
+
+* And radical (U+221A) contains a short segment B&lt;&lt;235.5,330.0&gt;-&lt;228.0,342.0&gt;-&lt;205.0,342.0&gt;&gt; [code: found-short-segments]
+</code></pre>
+</span></li></ul></div></details>
+<h3>Do any segments have colinear vectors?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_colinear_vectors&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have colinear vectors:</p>
+<pre><code>* uni20BF (U+20BF): L&lt;&lt;615.0,1382.0&gt;--&lt;760.0,1382.0&gt;&gt; -&gt; L&lt;&lt;760.0,1382.0&gt;--&lt;762.0,1382.0&gt;&gt; [code: found-colinear-vectors]
+</code></pre>
+</span></li></ul></div></details>
+<h3>Do outlines contain any jaggy segments?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_jaggy_segments&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have jaggy segments:</p>
+<pre><code>* threequarters (U+00BE): B&lt;&lt;683.5,1103.0&gt;-&lt;646.0,1046.0&gt;-&lt;546.0,1036.0&gt;&gt;/B&lt;&lt;546.0,1036.0&gt;-&lt;647.0,1021.0&gt;-&lt;697.5,965.0&gt;&gt; = 14.158120385408097
+
+* uni00B3 (U+00B3): B&lt;&lt;683.5,1247.0&gt;-&lt;646.0,1190.0&gt;-&lt;546.0,1180.0&gt;&gt;/B&lt;&lt;546.0,1180.0&gt;-&lt;647.0,1165.0&gt;-&lt;697.5,1109.0&gt;&gt; = 14.158120385408097
+
+* uni2078 (U+2078): B&lt;&lt;106.5,1110.0&gt;-&lt;161.0,1165.0&gt;-&lt;266.0,1179.0&gt;&gt;/B&lt;&lt;266.0,1179.0&gt;-&lt;168.0,1188.0&gt;-&lt;121.5,1246.5&gt;&gt; = 12.841782270207862
+
+* uni2078 (U+2078): B&lt;&lt;694.5,1246.5&gt;-&lt;648.0,1188.0&gt;-&lt;550.0,1179.0&gt;&gt;/B&lt;&lt;550.0,1179.0&gt;-&lt;653.0,1166.0&gt;-&lt;708.5,1111.0&gt;&gt; = 12.440608956911964
+
+* uni2462 (U+2462): B&lt;&lt;1272.5,819.0&gt;-&lt;1235.0,762.0&gt;-&lt;1135.0,752.0&gt;&gt;/B&lt;&lt;1135.0,752.0&gt;-&lt;1236.0,737.0&gt;-&lt;1286.5,681.0&gt;&gt; = 14.158120385408097
+
+* uni2467 (U+2467): B&lt;&lt;1271.0,818.5&gt;-&lt;1224.0,760.0&gt;-&lt;1127.0,751.0&gt;&gt;/B&lt;&lt;1127.0,751.0&gt;-&lt;1230.0,738.0&gt;-&lt;1285.5,683.0&gt;&gt; = 12.494396571821197 
+
+* And uni2467 (U+2467): B&lt;&lt;683.0,682.0&gt;-&lt;738.0,737.0&gt;-&lt;842.0,751.0&gt;&gt;/B&lt;&lt;842.0,751.0&gt;-&lt;745.0,760.0&gt;-&lt;698.5,818.5&gt;&gt; = 12.967730778339869 [code: found-jaggy-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have jaggy segments:</p>
+<pre><code>* M (U+004D): L&lt;&lt;1539.0,0.0&gt;--&lt;1480.0,1141.0&gt;&gt;/L&lt;&lt;1480.0,1141.0&gt;--&lt;1270.0,0.0&gt;&gt; = 13.388601138170905
+
+* M (U+004D): L&lt;&lt;753.0,0.0&gt;--&lt;544.0,1141.0&gt;&gt;/L&lt;&lt;544.0,1141.0&gt;--&lt;485.0,0.0&gt;&gt; = 13.340023431592341
+
+* beta (U+03B2): B&lt;&lt;1147.5,859.0&gt;-&lt;1082.0,810.0&gt;-&lt;967.0,799.0&gt;&gt;/B&lt;&lt;967.0,799.0&gt;-&lt;1140.0,774.0&gt;-&lt;1225.5,676.0&gt;&gt; = 13.686656703811517
+
+* eight (U+0038): B&lt;&lt;1081.5,819.0&gt;-&lt;1010.0,770.0&gt;-&lt;898.0,762.0&gt;&gt;/B&lt;&lt;898.0,762.0&gt;-&lt;1071.0,740.0&gt;-&lt;1165.0,651.0&gt;&gt; = 11.33288567346252
+
+* eight (U+0038): B&lt;&lt;140.0,649.0&gt;-&lt;231.0,740.0&gt;-&lt;410.0,762.0&gt;&gt;/B&lt;&lt;410.0,762.0&gt;-&lt;299.0,770.0&gt;-&lt;227.0,819.0&gt;&gt; = 11.129097451864148
+
+* germandbls (U+00DF): B&lt;&lt;1141.5,859.0&gt;-&lt;1076.0,810.0&gt;-&lt;961.0,799.0&gt;&gt;/B&lt;&lt;961.0,799.0&gt;-&lt;1134.0,774.0&gt;-&lt;1219.5,676.0&gt;&gt; = 13.686656703811517
+
+* three (U+0033): B&lt;&lt;1069.0,820.5&gt;-&lt;1005.0,773.0&gt;-&lt;891.0,764.0&gt;&gt;/B&lt;&lt;891.0,764.0&gt;-&lt;1061.0,739.0&gt;-&lt;1145.0,646.5&gt;&gt; = 12.879874582033827
+
+* threequarters (U+00BE): B&lt;&lt;694.5,1060.5&gt;-&lt;655.0,1031.0&gt;-&lt;582.0,1028.0&gt;&gt;/B&lt;&lt;582.0,1028.0&gt;-&lt;689.0,1014.0&gt;-&lt;738.0,960.5&gt;&gt; = 9.807595678856739
+
+* trademark (U+2122): L&lt;&lt;1166.0,720.0&gt;--&lt;1089.0,1260.0&gt;&gt;/L&lt;&lt;1089.0,1260.0&gt;--&lt;1062.0,720.0&gt;&gt; = 10.977652569059693
+
+* trademark (U+2122): L&lt;&lt;1566.0,720.0&gt;--&lt;1538.0,1260.0&gt;&gt;/L&lt;&lt;1538.0,1260.0&gt;--&lt;1461.0,720.0&gt;&gt; = 11.083481372819666
+
+* uni00B3 (U+00B3): B&lt;&lt;694.5,1204.5&gt;-&lt;655.0,1175.0&gt;-&lt;582.0,1172.0&gt;&gt;/B&lt;&lt;582.0,1172.0&gt;-&lt;689.0,1158.0&gt;-&lt;738.0,1104.5&gt;&gt; = 9.807595678856739
+
+* uni2078 (U+2078): B&lt;&lt;743.0,1238.0&gt;-&lt;695.0,1174.0&gt;-&lt;585.0,1171.0&gt;&gt;/B&lt;&lt;585.0,1171.0&gt;-&lt;692.0,1159.0&gt;-&lt;751.0,1110.0&gt;&gt; = 7.9611815442112706
+
+* uni2078 (U+2078): B&lt;&lt;99.5,1110.0&gt;-&lt;158.0,1159.0&gt;-&lt;266.0,1171.0&gt;&gt;/B&lt;&lt;266.0,1171.0&gt;-&lt;157.0,1174.0&gt;-&lt;109.0,1238.0&gt;&gt; = 7.91674180109363
+
+* uni216F (U+216F): L&lt;&lt;1734.0,316.0&gt;--&lt;1691.0,1141.0&gt;&gt;/L&lt;&lt;1691.0,1141.0&gt;--&lt;1481.0,0.0&gt;&gt; = 13.412154116465205
+
+* uni216F (U+216F): L&lt;&lt;964.0,0.0&gt;--&lt;755.0,1141.0&gt;&gt;/L&lt;&lt;755.0,1141.0&gt;--&lt;712.0,316.0&gt;&gt; = 13.36357640988664
+
+* uni2462 (U+2462): B&lt;&lt;1255.5,776.5&gt;-&lt;1216.0,747.0&gt;-&lt;1143.0,744.0&gt;&gt;/B&lt;&lt;1143.0,744.0&gt;-&lt;1250.0,730.0&gt;-&lt;1299.0,676.5&gt;&gt; = 9.807595678856739
+
+* uni2467 (U+2467): B&lt;&lt;1286.0,810.0&gt;-&lt;1238.0,746.0&gt;-&lt;1128.0,743.0&gt;&gt;/B&lt;&lt;1128.0,743.0&gt;-&lt;1235.0,731.0&gt;-&lt;1294.0,682.0&gt;&gt; = 7.9611815442112706 
+
+* And uni2467 (U+2467): B&lt;&lt;642.5,682.0&gt;-&lt;701.0,731.0&gt;-&lt;809.0,743.0&gt;&gt;/B&lt;&lt;809.0,743.0&gt;-&lt;700.0,746.0&gt;-&lt;652.0,810.0&gt;&gt; = 7.91674180109363 [code: found-jaggy-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BlackItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have jaggy segments:</p>
+<pre><code>* M (U+004D): L&lt;&lt;1357.0,0.0&gt;--&lt;1531.0,1083.0&gt;&gt;/L&lt;&lt;1531.0,1083.0&gt;--&lt;1099.0,0.0&gt;&gt; = 12.619245952152427
+
+* M (U+004D): L&lt;&lt;625.0,0.0&gt;--&lt;649.0,1099.0&gt;&gt;/L&lt;&lt;649.0,1099.0&gt;--&lt;363.0,0.0&gt;&gt; = 13.335883765462023
+
+* eight (U+0038): B&lt;&lt;1142.0,795.5&gt;-&lt;1056.0,741.0&gt;-&lt;931.0,732.0&gt;&gt;/B&lt;&lt;931.0,732.0&gt;-&lt;1077.0,713.0&gt;-&lt;1145.0,626.5&gt;&gt; = 11.53281999496351
+
+* eight (U+0038): B&lt;&lt;229.0,695.0&gt;-&lt;327.0,750.0&gt;-&lt;443.0,762.0&gt;&gt;/B&lt;&lt;443.0,762.0&gt;-&lt;307.0,773.0&gt;-&lt;244.0,844.0&gt;&gt; = 10.530292442199555
+
+* three (U+0033): B&lt;&lt;1103.5,787.0&gt;-&lt;1024.0,731.0&gt;-&lt;899.0,734.0&gt;&gt;/B&lt;&lt;899.0,734.0&gt;-&lt;1036.0,697.0&gt;-&lt;1098.5,621.5&gt;&gt; = 13.73863827900656
+
+* threequarters (U+00BE): B&lt;&lt;787.5,1040.0&gt;-&lt;739.0,1004.0&gt;-&lt;658.0,1009.0&gt;&gt;/B&lt;&lt;658.0,1009.0&gt;-&lt;745.0,987.0&gt;-&lt;782.0,946.5&gt;&gt; = 10.658801965133074
+
+* trademark (U+2122): L&lt;&lt;1135.0,720.0&gt;--&lt;1173.0,1232.0&gt;&gt;/L&lt;&lt;1173.0,1232.0&gt;--&lt;1041.0,720.0&gt;&gt; = 10.21211660400062
+
+* trademark (U+2122): L&lt;&lt;1514.0,720.0&gt;--&lt;1595.0,1227.0&gt;&gt;/L&lt;&lt;1595.0,1227.0&gt;--&lt;1419.0,720.0&gt;&gt; = 10.066881443577941
+
+* uni00B3 (U+00B3): B&lt;&lt;818.5,1184.0&gt;-&lt;770.0,1148.0&gt;-&lt;689.0,1153.0&gt;&gt;/B&lt;&lt;689.0,1153.0&gt;-&lt;776.0,1131.0&gt;-&lt;813.0,1090.5&gt;&gt; = 10.658801965133074
+
+* uni2078 (U+2078): B&lt;&lt;262.5,1134.0&gt;-&lt;323.0,1164.0&gt;-&lt;393.0,1170.0&gt;&gt;/B&lt;&lt;393.0,1170.0&gt;-&lt;302.0,1173.0&gt;-&lt;262.5,1216.5&gt;&gt; = 6.787280460528654
+
+* uni2078 (U+2078): B&lt;&lt;896.5,1228.5&gt;-&lt;836.0,1158.0&gt;-&lt;714.0,1152.0&gt;&gt;/B&lt;&lt;714.0,1152.0&gt;-&lt;806.0,1144.0&gt;-&lt;849.5,1092.5&gt;&gt; = 7.785297412321519
+
+* uni20A9 (U+20A9): L&lt;&lt;999.0,866.0&gt;--&lt;1017.0,1084.0&gt;&gt;/L&lt;&lt;1017.0,1084.0&gt;--&lt;942.0,866.0&gt;&gt; = 14.264960219388286
+
+* uni216F (U+216F): L&lt;&lt;1613.0,316.0&gt;--&lt;1736.0,1083.0&gt;&gt;/L&lt;&lt;1736.0,1083.0&gt;--&lt;1304.0,0.0&gt;&gt; = 12.635989606897025
+
+* uni216F (U+216F): L&lt;&lt;830.0,0.0&gt;--&lt;854.0,1099.0&gt;&gt;/L&lt;&lt;854.0,1099.0&gt;--&lt;650.0,316.0&gt;&gt; = 13.351971411717418
+
+* uni2462 (U+2462): B&lt;&lt;1297.5,756.0&gt;-&lt;1249.0,720.0&gt;-&lt;1168.0,725.0&gt;&gt;/B&lt;&lt;1168.0,725.0&gt;-&lt;1255.0,703.0&gt;-&lt;1292.0,662.5&gt;&gt; = 10.658801965133074
+
+* uni2467 (U+2467): B&lt;&lt;1377.5,800.5&gt;-&lt;1317.0,730.0&gt;-&lt;1195.0,724.0&gt;&gt;/B&lt;&lt;1195.0,724.0&gt;-&lt;1287.0,716.0&gt;-&lt;1330.5,664.5&gt;&gt; = 7.785297412321519 
+
+* And uni2467 (U+2467): B&lt;&lt;743.5,706.0&gt;-&lt;804.0,736.0&gt;-&lt;874.0,742.0&gt;&gt;/B&lt;&lt;874.0,742.0&gt;-&lt;783.0,745.0&gt;-&lt;743.5,788.5&gt;&gt; = 6.787280460528654 [code: found-jaggy-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-BoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have jaggy segments:</p>
+<pre><code>* threequarters (U+00BE): B&lt;&lt;748.5,1050.5&gt;-&lt;701.0,1018.0&gt;-&lt;629.0,1019.0&gt;&gt;/B&lt;&lt;629.0,1019.0&gt;-&lt;711.0,997.0&gt;-&lt;748.5,949.5&gt;&gt; = 14.222637078411404
+
+* trademark (U+2122): L&lt;&lt;1135.0,720.0&gt;--&lt;1143.0,1276.0&gt;&gt;/L&lt;&lt;1143.0,1276.0&gt;--&lt;998.0,720.0&gt;&gt; = 13.792336133417562
+
+* trademark (U+2122): L&lt;&lt;1499.0,720.0&gt;--&lt;1588.0,1276.0&gt;&gt;/L&lt;&lt;1588.0,1276.0&gt;--&lt;1362.0,720.0&gt;&gt; = 13.026207984148556
+
+* uni00B3 (U+00B3): B&lt;&lt;779.5,1194.5&gt;-&lt;732.0,1162.0&gt;-&lt;660.0,1163.0&gt;&gt;/B&lt;&lt;660.0,1163.0&gt;-&lt;742.0,1141.0&gt;-&lt;779.5,1093.5&gt;&gt; = 14.222637078411404
+
+* uni2078 (U+2078): B&lt;&lt;212.5,1099.5&gt;-&lt;288.0,1168.0&gt;-&lt;393.0,1179.0&gt;&gt;/B&lt;&lt;393.0,1179.0&gt;-&lt;314.0,1187.0&gt;-&lt;277.0,1230.0&gt;&gt; = 11.762991847127475
+
+* uni2078 (U+2078): B&lt;&lt;845.5,1235.5&gt;-&lt;786.0,1170.0&gt;-&lt;677.0,1162.0&gt;&gt;/B&lt;&lt;677.0,1162.0&gt;-&lt;760.0,1150.0&gt;-&lt;801.5,1099.0&gt;&gt; = 12.42439082126908
+
+* uni2462 (U+2462): B&lt;&lt;1289.5,766.5&gt;-&lt;1242.0,734.0&gt;-&lt;1170.0,735.0&gt;&gt;/B&lt;&lt;1170.0,735.0&gt;-&lt;1252.0,713.0&gt;-&lt;1289.0,665.5&gt;&gt; = 14.222637078411404
+
+* uni2467 (U+2467): B&lt;&lt;1356.5,807.5&gt;-&lt;1297.0,742.0&gt;-&lt;1188.0,734.0&gt;&gt;/B&lt;&lt;1188.0,734.0&gt;-&lt;1272.0,722.0&gt;-&lt;1313.5,671.0&gt;&gt; = 12.32777071131689 
+
+* And uni2467 (U+2467): B&lt;&lt;724.0,671.5&gt;-&lt;799.0,740.0&gt;-&lt;905.0,751.0&gt;&gt;/B&lt;&lt;905.0,751.0&gt;-&lt;825.0,759.0&gt;-&lt;788.0,802.0&gt;&gt; = 11.635175119482108 [code: found-jaggy-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBoldItalic.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have jaggy segments:</p>
+<pre><code>* M (U+004D): L&lt;&lt;1346.0,0.0&gt;--&lt;1527.0,1131.0&gt;&gt;/L&lt;&lt;1527.0,1131.0&gt;--&lt;1044.0,0.0&gt;&gt; = 14.032928777844976
+
+* eight (U+0038): B&lt;&lt;1106.0,802.0&gt;-&lt;1022.0,749.0&gt;-&lt;904.0,739.0&gt;&gt;/B&lt;&lt;904.0,739.0&gt;-&lt;1044.0,717.0&gt;-&lt;1110.0,630.5&gt;&gt; = 13.774590475499686
+
+* eight (U+0038): B&lt;&lt;230.5,697.5&gt;-&lt;327.0,755.0&gt;-&lt;443.0,769.0&gt;&gt;/B&lt;&lt;443.0,769.0&gt;-&lt;315.0,783.0&gt;-&lt;254.0,854.0&gt;&gt; = 13.123637978051972
+
+* threequarters (U+00BE): B&lt;&lt;769.0,1045.0&gt;-&lt;721.0,1011.0&gt;-&lt;644.0,1014.0&gt;&gt;/B&lt;&lt;644.0,1014.0&gt;-&lt;729.0,991.0&gt;-&lt;766.0,947.5&gt;&gt; = 12.909809227045631
+
+* trademark (U+2122): L&lt;&lt;1135.0,720.0&gt;--&lt;1159.0,1255.0&gt;&gt;/L&lt;&lt;1159.0,1255.0&gt;--&lt;1020.0,720.0&gt;&gt; = 11.995628477251346
+
+* trademark (U+2122): L&lt;&lt;1507.0,720.0&gt;--&lt;1592.0,1252.0&gt;&gt;/L&lt;&lt;1592.0,1252.0&gt;--&lt;1391.0,720.0&gt;&gt; = 11.619869897707696
+
+* uni00B3 (U+00B3): B&lt;&lt;800.0,1189.0&gt;-&lt;752.0,1155.0&gt;-&lt;675.0,1158.0&gt;&gt;/B&lt;&lt;675.0,1158.0&gt;-&lt;760.0,1135.0&gt;-&lt;797.0,1091.5&gt;&gt; = 12.909809227045631
+
+* uni2078 (U+2078): B&lt;&lt;210.0,1099.0&gt;-&lt;288.0,1164.0&gt;-&lt;393.0,1174.0&gt;&gt;/B&lt;&lt;393.0,1174.0&gt;-&lt;308.0,1180.0&gt;-&lt;269.5,1223.0&gt;&gt; = 9.478042651982568
+
+* uni2078 (U+2078): B&lt;&lt;872.0,1232.0&gt;-&lt;812.0,1164.0&gt;-&lt;696.0,1157.0&gt;&gt;/B&lt;&lt;696.0,1157.0&gt;-&lt;784.0,1147.0&gt;-&lt;826.5,1095.5&gt;&gt; = 9.936389943428276
+
+* uni216F (U+216F): L&lt;&lt;1588.0,278.0&gt;--&lt;1724.0,1127.0&gt;&gt;/L&lt;&lt;1724.0,1127.0&gt;--&lt;1242.0,0.0&gt;&gt; = 14.054821480518196
+
+* uni2462 (U+2462): B&lt;&lt;1294.0,761.0&gt;-&lt;1246.0,727.0&gt;-&lt;1169.0,730.0&gt;&gt;/B&lt;&lt;1169.0,730.0&gt;-&lt;1254.0,707.0&gt;-&lt;1291.0,663.5&gt;&gt; = 12.909809227045631
+
+* uni2467 (U+2467): B&lt;&lt;1367.0,804.0&gt;-&lt;1307.0,736.0&gt;-&lt;1192.0,729.0&gt;&gt;/B&lt;&lt;1192.0,729.0&gt;-&lt;1279.0,719.0&gt;-&lt;1322.0,667.5&gt;&gt; = 10.040217967161045 
+
+* And uni2467 (U+2467): B&lt;&lt;706.0,671.0&gt;-&lt;784.0,736.0&gt;-&lt;889.0,746.0&gt;&gt;/B&lt;&lt;889.0,746.0&gt;-&lt;804.0,752.0&gt;-&lt;765.5,795.0&gt;&gt; = 9.478042651982568 [code: found-jaggy-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have jaggy segments:</p>
+<pre><code>* eight (U+0038): B&lt;&lt;1047.5,826.5&gt;-&lt;978.0,779.0&gt;-&lt;872.0,768.0&gt;&gt;/B&lt;&lt;872.0,768.0&gt;-&lt;1042.0,745.0&gt;-&lt;1133.5,652.0&gt;&gt; = 13.62957918082145
+
+* eight (U+0038): B&lt;&lt;146.0,650.0&gt;-&lt;235.0,744.0&gt;-&lt;410.0,768.0&gt;&gt;/B&lt;&lt;410.0,768.0&gt;-&lt;304.0,779.0&gt;-&lt;234.5,826.5&gt;&gt; = 13.733574442278227
+
+* three (U+0033): B&lt;&lt;1036.5,828.0&gt;-&lt;973.0,781.0&gt;-&lt;864.0,770.0&gt;&gt;/B&lt;&lt;864.0,770.0&gt;-&lt;1031.0,745.0&gt;-&lt;1115.5,650.5&gt;&gt; = 14.276620816348775
+
+* threequarters (U+00BE): B&lt;&lt;673.0,1066.0&gt;-&lt;634.0,1037.0&gt;-&lt;564.0,1032.0&gt;&gt;/B&lt;&lt;564.0,1032.0&gt;-&lt;668.0,1017.0&gt;-&lt;718.0,962.5&gt;&gt; = 12.29283319189298
+
+* trademark (U+2122): L&lt;&lt;1154.0,720.0&gt;--&lt;1057.0,1277.0&gt;&gt;/L&lt;&lt;1057.0,1277.0&gt;--&lt;1029.0,720.0&gt;&gt; = 12.756625981495414
+
+* trademark (U+2122): L&lt;&lt;1546.0,720.0&gt;--&lt;1516.0,1278.0&gt;&gt;/L&lt;&lt;1516.0,1278.0&gt;--&lt;1420.0,720.0&gt;&gt; = 12.839230174466637
+
+* uni00B3 (U+00B3): B&lt;&lt;673.0,1210.0&gt;-&lt;634.0,1181.0&gt;-&lt;564.0,1176.0&gt;&gt;/B&lt;&lt;564.0,1176.0&gt;-&lt;668.0,1161.0&gt;-&lt;718.0,1106.5&gt;&gt; = 12.29283319189298
+
+* uni2078 (U+2078): B&lt;&lt;103.0,1110.0&gt;-&lt;160.0,1162.0&gt;-&lt;266.0,1175.0&gt;&gt;/B&lt;&lt;266.0,1175.0&gt;-&lt;162.0,1181.0&gt;-&lt;115.0,1242.5&gt;&gt; = 10.293791021102773
+
+* uni2078 (U+2078): B&lt;&lt;719.5,1242.0&gt;-&lt;672.0,1181.0&gt;-&lt;568.0,1175.0&gt;&gt;/B&lt;&lt;568.0,1175.0&gt;-&lt;673.0,1162.0&gt;-&lt;730.5,1110.5&gt;&gt; = 10.359712324316027
+
+* uni2462 (U+2462): B&lt;&lt;1248.0,782.0&gt;-&lt;1209.0,753.0&gt;-&lt;1139.0,748.0&gt;&gt;/B&lt;&lt;1139.0,748.0&gt;-&lt;1243.0,733.0&gt;-&lt;1293.0,678.5&gt;&gt; = 12.29283319189298
+
+* uni2467 (U+2467): B&lt;&lt;1278.5,814.0&gt;-&lt;1231.0,753.0&gt;-&lt;1127.0,747.0&gt;&gt;/B&lt;&lt;1127.0,747.0&gt;-&lt;1233.0,734.0&gt;-&lt;1290.0,682.5&gt;&gt; = 10.293791021102773 
+
+* And uni2467 (U+2467): B&lt;&lt;662.5,682.0&gt;-&lt;719.0,734.0&gt;-&lt;825.0,747.0&gt;&gt;/B&lt;&lt;825.0,747.0&gt;-&lt;721.0,753.0&gt;-&lt;674.0,814.5&gt;&gt; = 10.293791021102773 [code: found-jaggy-segments]
+</code></pre>
+</span></li></ul></div></details>
+<h3>Do outlines contain any semi-vertical or semi-horizontal lines?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_semi_vertical&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
+<pre><code>* uni20BA (U+20BA): L&lt;&lt;80.0,0.0&gt;--&lt;81.0,247.0&gt;&gt;
+
+* uni2196 (U+2196): L&lt;&lt;129.0,317.0&gt;--&lt;130.0,1237.0&gt;&gt;
+
+* uni2196 (U+2196): L&lt;&lt;130.0,1237.0&gt;--&lt;1051.0,1239.0&gt;&gt;
+
+* uni2197 (U+2197): L&lt;&lt;1115.0,1237.0&gt;--&lt;1116.0,317.0&gt;&gt;
+
+* uni2197 (U+2197): L&lt;&lt;194.0,1239.0&gt;--&lt;1115.0,1237.0&gt;&gt;
+
+* uni2198 (U+2198): L&lt;&lt;1116.0,189.0&gt;--&lt;194.0,187.0&gt;&gt;
+
+* uni2199 (U+2199): L&lt;&lt;1051.0,186.0&gt;--&lt;130.0,187.0&gt;&gt; 
+
+* And uni2199 (U+2199): L&lt;&lt;130.0,187.0&gt;--&lt;129.0,1108.0&gt;&gt; [code: found-semi-vertical]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
+<pre><code>* germandbls (U+00DF): L&lt;&lt;512.0,900.0&gt;--&lt;658.0,901.0&gt;&gt;
+
+* uni20BA (U+20BA): L&lt;&lt;86.0,0.0&gt;--&lt;87.0,213.0&gt;&gt;
+
+* uni2196 (U+2196): L&lt;&lt;136.0,338.0&gt;--&lt;137.0,1238.0&gt;&gt;
+
+* uni2196 (U+2196): L&lt;&lt;137.0,1238.0&gt;--&lt;1037.0,1239.0&gt;&gt;
+
+* uni2197 (U+2197): L&lt;&lt;209.0,1239.0&gt;--&lt;1110.0,1238.0&gt;&gt;
+
+* uni2198 (U+2198): L&lt;&lt;1110.0,188.0&gt;--&lt;209.0,187.0&gt;&gt;
+
+* uni2199 (U+2199): L&lt;&lt;1037.0,186.0&gt;--&lt;137.0,188.0&gt;&gt; 
+
+* And uni2199 (U+2199): L&lt;&lt;137.0,188.0&gt;--&lt;136.0,1087.0&gt;&gt; [code: found-semi-vertical]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
+<pre><code>* uni20BA (U+20BA): L&lt;&lt;68.0,0.0&gt;--&lt;69.0,315.0&gt;&gt;
+
+* uni2196 (U+2196): L&lt;&lt;114.0,274.0&gt;--&lt;115.0,1237.0&gt;&gt;
+
+* uni2196 (U+2196): L&lt;&lt;115.0,1237.0&gt;--&lt;1078.0,1238.0&gt;&gt;
+
+* uni2197 (U+2197): L&lt;&lt;1126.0,1237.0&gt;--&lt;1127.0,274.0&gt;&gt;
+
+* uni2197 (U+2197): L&lt;&lt;163.0,1238.0&gt;--&lt;1126.0,1237.0&gt;&gt;
+
+* uni2198 (U+2198): L&lt;&lt;1127.0,189.0&gt;--&lt;164.0,188.0&gt;&gt;
+
+* uni2198 (U+2198): L&lt;&lt;1128.0,1152.0&gt;--&lt;1127.0,189.0&gt;&gt;
+
+* uni2199 (U+2199): L&lt;&lt;1078.0,186.0&gt;--&lt;115.0,187.0&gt;&gt; 
+
+* And uni2199 (U+2199): L&lt;&lt;115.0,187.0&gt;--&lt;114.0,1150.0&gt;&gt; [code: found-semi-vertical]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
+<pre><code>* beta (U+03B2): L&lt;&lt;484.0,892.0&gt;--&lt;638.0,893.0&gt;&gt;
+
+* uni20BA (U+20BA): L&lt;&lt;91.0,0.0&gt;--&lt;92.0,184.0&gt;&gt;
+
+* uni2196 (U+2196): L&lt;&lt;143.0,1238.0&gt;--&lt;1025.0,1240.0&gt;&gt;
+
+* uni2197 (U+2197): L&lt;&lt;222.0,1240.0&gt;--&lt;1105.0,1238.0&gt;&gt;
+
+* uni2198 (U+2198): L&lt;&lt;1105.0,188.0&gt;--&lt;223.0,186.0&gt;&gt; 
+
+* And uni2199 (U+2199): L&lt;&lt;1025.0,186.0&gt;--&lt;143.0,188.0&gt;&gt; [code: found-semi-vertical]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
+<pre><code>* uni20BA (U+20BA): L&lt;&lt;95.0,0.0&gt;--&lt;96.0,160.0&gt;&gt;
+
+* uni2196 (U+2196): L&lt;&lt;148.0,1238.0&gt;--&lt;1016.0,1240.0&gt;&gt;
+
+* uni2197 (U+2197): L&lt;&lt;233.0,1240.0&gt;--&lt;1101.0,1238.0&gt;&gt;
+
+* uni2198 (U+2198): L&lt;&lt;1101.0,188.0&gt;--&lt;233.0,186.0&gt;&gt; 
+
+* And uni2199 (U+2199): L&lt;&lt;1016.0,186.0&gt;--&lt;148.0,188.0&gt;&gt; [code: found-semi-vertical]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/ttf/SchibstedGrotesk-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
+<pre><code>* uni20BA (U+20BA): L&lt;&lt;74.0,0.0&gt;--&lt;75.0,282.0&gt;&gt;
+
+* uni2196 (U+2196): L&lt;&lt;121.0,295.0&gt;--&lt;122.0,1237.0&gt;&gt;
+
+* uni2196 (U+2196): L&lt;&lt;122.0,1237.0&gt;--&lt;1065.0,1238.0&gt;&gt;
+
+* uni2197 (U+2197): L&lt;&lt;178.0,1238.0&gt;--&lt;1121.0,1237.0&gt;&gt;
+
+* uni2198 (U+2198): L&lt;&lt;1121.0,189.0&gt;--&lt;179.0,188.0&gt;&gt;
+
+* uni2198 (U+2198): L&lt;&lt;1122.0,1131.0&gt;--&lt;1121.0,189.0&gt;&gt;
+
+* uni2199 (U+2199): L&lt;&lt;1065.0,186.0&gt;--&lt;122.0,187.0&gt;&gt; 
+
+* And uni2199 (U+2199): L&lt;&lt;122.0,187.0&gt;--&lt;121.0,1129.0&gt;&gt; [code: found-semi-vertical]
+</code></pre>
+</span></li></ul></div></details>
+                    </body>
+                </html>
