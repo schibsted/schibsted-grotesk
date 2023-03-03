@@ -9,4 +9,5 @@
 # Names should be added to this file as:
 # Name <email address>
 
+Bakken & Baeck AS <https://bakkenbaeck.com>
 Henrik Kongsvoll <henke@henkehenke.no>
