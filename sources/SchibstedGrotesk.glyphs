@@ -25690,6 +25690,12 @@ kernLeft = f_f;
 kernRight = f_f;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+pos = (698,0);
+}
+);
 background = {
 shapes = (
 {
@@ -25714,6 +25720,12 @@ ref = f;
 width = 1396;
 },
 {
+anchors = (
+{
+name = caret_1;
+pos = (804,0);
+}
+);
 background = {
 shapes = (
 {
@@ -25747,6 +25759,16 @@ kernLeft = f_f;
 kernRight = f_i;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+pos = (623.333,0);
+},
+{
+name = caret_2;
+pos = (1246.667,0);
+}
+);
 background = {
 shapes = (
 {
@@ -25779,6 +25801,16 @@ ref = i;
 width = 1870;
 },
 {
+anchors = (
+{
+name = caret_1;
+pos = (747,0);
+},
+{
+name = caret_2;
+pos = (1494,0);
+}
+);
 background = {
 shapes = (
 {
@@ -25819,6 +25851,40 @@ glyphname = f_f_ij;
 kernLeft = f;
 layers = (
 {
+anchors = (
+{
+name = bottom_1;
+pos = (399,0);
+},
+{
+name = bottom_2;
+pos = (1197,0);
+},
+{
+name = bottom_3;
+pos = (1995,0);
+},
+{
+name = caret_1;
+pos = (798,0);
+},
+{
+name = caret_2;
+pos = (1596,0);
+},
+{
+name = top_1;
+pos = (399,2000);
+},
+{
+name = top_2;
+pos = (1197,2000);
+},
+{
+name = top_3;
+pos = (1995,2000);
+}
+);
 background = {
 shapes = (
 {
@@ -25843,6 +25909,40 @@ ref = ij;
 width = 2394;
 },
 {
+anchors = (
+{
+name = bottom_1;
+pos = (485,0);
+},
+{
+name = bottom_2;
+pos = (1454,0);
+},
+{
+name = bottom_3;
+pos = (2423,0);
+},
+{
+name = caret_1;
+pos = (969.333,0);
+},
+{
+name = caret_2;
+pos = (1938.667,0);
+},
+{
+name = top_1;
+pos = (485,2000);
+},
+{
+name = top_2;
+pos = (1454,2000);
+},
+{
+name = top_3;
+pos = (2423,2000);
+}
+);
 background = {
 shapes = (
 {
@@ -25876,6 +25976,16 @@ kernLeft = f;
 kernRight = f_l;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+pos = (635.333,0);
+},
+{
+name = caret_2;
+pos = (1270.667,0);
+}
+);
 background = {
 shapes = (
 {
@@ -25908,6 +26018,16 @@ ref = l;
 width = 1906;
 },
 {
+anchors = (
+{
+name = caret_1;
+pos = (749.667,0);
+},
+{
+name = caret_2;
+pos = (1499.333,0);
+}
+);
 background = {
 shapes = (
 {
@@ -25949,6 +26069,28 @@ kernLeft = f_f;
 kernRight = f_i;
 layers = (
 {
+anchors = (
+{
+name = bottom_1;
+pos = (293,0);
+},
+{
+name = bottom_2;
+pos = (879,0);
+},
+{
+name = caret_1;
+pos = (586,0);
+},
+{
+name = top_1;
+pos = (293,2000);
+},
+{
+name = top_2;
+pos = (879,2000);
+}
+);
 background = {
 shapes = (
 {
@@ -25973,6 +26115,28 @@ ref = i;
 width = 1172;
 },
 {
+anchors = (
+{
+name = bottom_1;
+pos = (359,0);
+},
+{
+name = bottom_2;
+pos = (1078,0);
+},
+{
+name = caret_1;
+pos = (718.5,0);
+},
+{
+name = top_1;
+pos = (359,2000);
+},
+{
+name = top_2;
+pos = (1078,2000);
+}
+);
 background = {
 shapes = (
 {
@@ -26005,6 +26169,28 @@ glyphname = f_ij;
 kernLeft = f;
 layers = (
 {
+anchors = (
+{
+name = bottom_1;
+pos = (424,0);
+},
+{
+name = bottom_2;
+pos = (1272,0);
+},
+{
+name = caret_1;
+pos = (848,0);
+},
+{
+name = top_1;
+pos = (424,2000);
+},
+{
+name = top_2;
+pos = (1272,2000);
+}
+);
 background = {
 shapes = (
 {
@@ -26029,6 +26215,28 @@ ref = ij;
 width = 1696;
 },
 {
+anchors = (
+{
+name = bottom_1;
+pos = (526,0);
+},
+{
+name = bottom_2;
+pos = (1578,0);
+},
+{
+name = caret_1;
+pos = (1052,0);
+},
+{
+name = top_1;
+pos = (526,2000);
+},
+{
+name = top_2;
+pos = (1578,2000);
+}
+);
 background = {
 shapes = (
 {
@@ -26062,6 +26270,28 @@ kernLeft = f;
 kernRight = f_l;
 layers = (
 {
+anchors = (
+{
+name = bottom_1;
+pos = (302,0);
+},
+{
+name = bottom_2;
+pos = (906,0);
+},
+{
+name = caret_1;
+pos = (604,0);
+},
+{
+name = top_1;
+pos = (302,2000);
+},
+{
+name = top_2;
+pos = (906,2000);
+}
+);
 background = {
 shapes = (
 {
@@ -26086,6 +26316,28 @@ ref = l;
 width = 1208;
 },
 {
+anchors = (
+{
+name = bottom_1;
+pos = (361,0);
+},
+{
+name = bottom_2;
+pos = (1084,0);
+},
+{
+name = caret_1;
+pos = (722.5,0);
+},
+{
+name = top_1;
+pos = (361,2000);
+},
+{
+name = top_2;
+pos = (1084,2000);
+}
+);
 background = {
 shapes = (
 {
@@ -26117,6 +26369,12 @@ metricRight = l;
 glyphname = fi;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+pos = (586,0);
+}
+);
 background = {
 shapes = (
 {
@@ -26141,6 +26399,12 @@ ref = i;
 width = 1172;
 },
 {
+anchors = (
+{
+name = caret_1;
+pos = (718.5,0);
+}
+);
 background = {
 shapes = (
 {
@@ -26173,6 +26437,12 @@ unicode = 64257;
 glyphname = fl;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+pos = (604,0);
+}
+);
 background = {
 shapes = (
 {
@@ -26197,6 +26467,12 @@ ref = l;
 width = 1208;
 },
 {
+anchors = (
+{
+name = caret_1;
+pos = (722.5,0);
+}
+);
 background = {
 shapes = (
 {
@@ -45733,7 +46009,7 @@ pos = (1634,0);
 ref = ordmasculine;
 }
 );
-width = 2620;
+width = 2598;
 }
 );
 unicode = 8470;
