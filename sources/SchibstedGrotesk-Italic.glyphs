@@ -18009,11 +18009,11 @@ shapes = (
 ref = i;
 },
 {
-pos = (440,0);
+pos = (465,0);
 ref = j;
 }
 );
-width = 966;
+width = 991;
 },
 {
 background = {
@@ -25687,6 +25687,12 @@ kernLeft = f_f;
 kernRight = f_f;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+pos = (667,0);
+}
+);
 background = {
 shapes = (
 {
@@ -25711,6 +25717,12 @@ ref = f;
 width = 1334;
 },
 {
+anchors = (
+{
+name = caret_1;
+pos = (762,0);
+}
+);
 background = {
 shapes = (
 {
@@ -25744,6 +25756,16 @@ kernLeft = f_f;
 kernRight = f_i;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+pos = (601.333,0);
+},
+{
+name = caret_2;
+pos = (1202.667,0);
+}
+);
 background = {
 shapes = (
 {
@@ -25776,6 +25798,16 @@ ref = i;
 width = 1804;
 },
 {
+anchors = (
+{
+name = caret_1;
+pos = (703,0);
+},
+{
+name = caret_2;
+pos = (1406,0);
+}
+);
 background = {
 shapes = (
 {
@@ -25816,6 +25848,40 @@ glyphname = f_f_ij;
 kernLeft = f;
 layers = (
 {
+anchors = (
+{
+name = bottom_1;
+pos = (271,0);
+},
+{
+name = bottom_2;
+pos = (1044,0);
+},
+{
+name = bottom_3;
+pos = (1816,0);
+},
+{
+name = caret_1;
+pos = (772.333,0);
+},
+{
+name = caret_2;
+pos = (1544.667,0);
+},
+{
+name = top_1;
+pos = (696,2000);
+},
+{
+name = top_2;
+pos = (1469,2000);
+},
+{
+name = top_3;
+pos = (2241,2000);
+}
+);
 background = {
 shapes = (
 {
@@ -25837,9 +25903,43 @@ pos = (1326,0);
 ref = ij;
 }
 );
-width = 2292;
+width = 2317;
 },
 {
+anchors = (
+{
+name = bottom_1;
+pos = (343,0);
+},
+{
+name = bottom_2;
+pos = (1259,0);
+},
+{
+name = bottom_3;
+pos = (2175,0);
+},
+{
+name = caret_1;
+pos = (916,0);
+},
+{
+name = caret_2;
+pos = (1832,0);
+},
+{
+name = top_1;
+pos = (768,2000);
+},
+{
+name = top_2;
+pos = (1684,2000);
+},
+{
+name = top_3;
+pos = (2600,2000);
+}
+);
 background = {
 shapes = (
 {
@@ -25873,6 +25973,16 @@ kernLeft = f;
 kernRight = f_l;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+pos = (606.333,0);
+},
+{
+name = caret_2;
+pos = (1212.667,0);
+}
+);
 background = {
 shapes = (
 {
@@ -25905,6 +26015,16 @@ ref = l;
 width = 1819;
 },
 {
+anchors = (
+{
+name = caret_1;
+pos = (710.333,0);
+},
+{
+name = caret_2;
+pos = (1420.667,0);
+}
+);
 background = {
 shapes = (
 {
@@ -25946,6 +26066,28 @@ kernLeft = f_f;
 kernRight = f_i;
 layers = (
 {
+anchors = (
+{
+name = bottom_1;
+pos = (169,0);
+},
+{
+name = bottom_2;
+pos = (738,0);
+},
+{
+name = caret_1;
+pos = (568.5,0);
+},
+{
+name = top_1;
+pos = (594,2000);
+},
+{
+name = top_2;
+pos = (1163,2000);
+}
+);
 background = {
 shapes = (
 {
@@ -25970,6 +26112,28 @@ ref = i;
 width = 1137;
 },
 {
+anchors = (
+{
+name = bottom_1;
+pos = (222,0);
+},
+{
+name = bottom_2;
+pos = (895,0);
+},
+{
+name = caret_1;
+pos = (673.5,0);
+},
+{
+name = top_1;
+pos = (647,2000);
+},
+{
+name = top_2;
+pos = (1320,2000);
+}
+);
 background = {
 shapes = (
 {
@@ -26002,6 +26166,28 @@ glyphname = f_ij;
 kernLeft = f;
 layers = (
 {
+anchors = (
+{
+name = bottom_1;
+pos = (298,0);
+},
+{
+name = bottom_2;
+pos = (1123,0);
+},
+{
+name = caret_1;
+pos = (825,0);
+},
+{
+name = top_1;
+pos = (723,2000);
+},
+{
+name = top_2;
+pos = (1548,2000);
+}
+);
 background = {
 shapes = (
 {
@@ -26023,9 +26209,31 @@ pos = (659,0);
 ref = ij;
 }
 );
-width = 1625;
+width = 1650;
 },
 {
+anchors = (
+{
+name = bottom_1;
+pos = (382,0);
+},
+{
+name = bottom_2;
+pos = (1375,0);
+},
+{
+name = caret_1;
+pos = (993,0);
+},
+{
+name = top_1;
+pos = (807,2000);
+},
+{
+name = top_2;
+pos = (1800,2000);
+}
+);
 background = {
 shapes = (
 {
@@ -26059,6 +26267,28 @@ kernLeft = f;
 kernRight = f_l;
 layers = (
 {
+anchors = (
+{
+name = bottom_1;
+pos = (173,0);
+},
+{
+name = bottom_2;
+pos = (749,0);
+},
+{
+name = caret_1;
+pos = (576,0);
+},
+{
+name = top_1;
+pos = (598,2000);
+},
+{
+name = top_2;
+pos = (1174,2000);
+}
+);
 background = {
 shapes = (
 {
@@ -26083,6 +26313,28 @@ ref = l;
 width = 1152;
 },
 {
+anchors = (
+{
+name = bottom_1;
+pos = (227,0);
+},
+{
+name = bottom_2;
+pos = (912,0);
+},
+{
+name = caret_1;
+pos = (684.5,0);
+},
+{
+name = top_1;
+pos = (652,2000);
+},
+{
+name = top_2;
+pos = (1337,2000);
+}
+);
 background = {
 shapes = (
 {
@@ -26114,6 +26366,12 @@ metricRight = l;
 glyphname = fi;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+pos = (568.5,0);
+}
+);
 background = {
 shapes = (
 {
@@ -26138,6 +26396,12 @@ ref = i;
 width = 1137;
 },
 {
+anchors = (
+{
+name = caret_1;
+pos = (673.5,0);
+}
+);
 background = {
 shapes = (
 {
@@ -26170,6 +26434,12 @@ unicode = 64257;
 glyphname = fl;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+pos = (576,0);
+}
+);
 background = {
 shapes = (
 {
@@ -26194,6 +26464,12 @@ ref = l;
 width = 1152;
 },
 {
+anchors = (
+{
+name = caret_1;
+pos = (684.5,0);
+}
+);
 background = {
 shapes = (
 {
